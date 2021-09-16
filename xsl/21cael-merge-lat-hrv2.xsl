@@ -7,7 +7,7 @@
         <xsl:strip-space elements="*"/>
     <xsl:include href="copy.xsl"/>
     <xsl:variable name="hrv">
-        <xsl:copy-of select="document('file:///home/neven/Repos/psl-cicero-lat-hrv/data/cael-hrv.xml')//text"/>
+        <xsl:copy-of select="document('../data/cael-hrv.xml')//text"/>
     </xsl:variable>
         
         
