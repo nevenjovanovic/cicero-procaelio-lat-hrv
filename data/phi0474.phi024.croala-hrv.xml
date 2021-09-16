@@ -881,10 +881,8 @@ Collegii Reginae Socius</title>
                  org="uniform"
                  sample="complete"> 
                <p part="N"> 
-                  <reg instant="false">qua</reg> re, si cui nimium effervisse videtur huius vel in suscipiendis vel in gerendis inimicitiis vis, ferocitas, pertinacia, si quem etiam minimorum horum aliquid offendit, si purpurae genus, si amicorum catervae, si splendor, si nitor, iam ista deferverint, iam aetas omnia, iam res, iam dies mitigarit. <milestone n="32" unit="chapter"/> 
-               </p> 
-               <p part="N"> 
-                  <reg instant="false">conservate</reg> igitur rei publicae, iudices, civem bonarum artium, bonarum partium, bonorum virorum. <reg instant="false">promitto</reg> hoc vobis et rei publicae spondeo, si modo nos ipsi rei publicae satis fecimus, numquam hunc a nostris rationibus seiunctum fore. <reg instant="false">quod</reg> cum fretus nostra familiaritate promitto, tum quod durissimis se ipse legibus iam obligavit. </p> 
+                  <s>Zbog toga, ako se nekome čini da su – bilo u prihvaćanju neprijateljstava, bilo u borbi s njima – previše kipjeli silovitost, žestina, nepopustljivost ovdje prisutnog; ako nekoga smeta čak i nešto od ovih sitnica, vrsta grimiza, masa prijatelja, sjaj, blještavilo – sve se to već ispuhalo, već su to ublažili dob, i situacija, i vrijeme.</s><milestone n="32" unit="chapter"/> 
+                  <s>Spasite, stoga, državi na korist, gospodo suci, građanina koji se odlikuje valjanim umijećima, valjanom politikom, valjanim društvom.</s> <s>Obećavam vama, a državi svečano prisižem, pod uvjetom da sam osobno prema državi ispunio dužnost: ovaj čovjek nikad neće biti isključen iz mojih nastojanja.</s>  <s>To mogu obećati uzdajući se u našu bliskost, a i zato što se i on sam već podvrgnuo najstrožim zakonskim obavezama.</s></p> 
             </div> 
             <div type="textpart"
                  subtype="section"
@@ -892,16 +890,7 @@ Collegii Reginae Socius</title>
                  part="N"
                  org="uniform"
                  sample="complete"> 
-               <p part="N"> 
-                  <reg instant="false">non</reg> enim potest qui hominem consularem, cum ab eo rem publicam violatam esse diceret, in iudicium vocarit ipse esse in re publica civis turbulentus; non potest qui ambitu ne absolutum quidem patiatur esse absolutum ipse impune umquam esse largitor. <reg instant="false">habet</reg> a <choice>
-                     <abbr>M.</abbr>
-                     <expan instant="false">M<ex instant="false">arco</ex>
-                     </expan>
-                  </choice> Caelio res publica, iudices, duas accusationes vel obsides periculi vel pignora voluntatis. <reg instant="false">qua</reg> re oro obtestorque vos, iudices, ut qua in civitate paucis his diebus Sex. Clodius absolutus est, quem vos per biennium aut ministrum seditionis aut ducem vidistis, hominem sine re, sine fide, sine spe, sine sede, sine fortunis, ore, lingua, manu, vita omni inquinatum, qui aedis sacras, qui censum populi Romani, qui memoriam publicam suis manibus incendit, qui Catuli monumentum adflixit, meam domum diruit, mei fratris incendit, qui in Palatio atque in urbis oculis servitia ad caedem et ad inflammandam urbem incitavit: in ea civitate ne patiamini illum absolutum muliebri gratia, <choice>
-                     <abbr>M.</abbr>
-                     <expan instant="false">M<ex instant="false">arcum</ex>
-                     </expan>
-                  </choice> Caelium libidini muliebri condonatum, ne eadem mulier cum suo coniuge et fratre et turpissimum latronem eripuisse et honestissimum adulescentem oppressisse videatur. </p> 
+               <p part="N"> <s>Jer ne može netko tko je bivšega konzula, govoreći da je narušio djelovanje države, izveo pred sud, sam u državi biti buntovan građanin; ne može netko, tko ne trpi da ni onaj tko je oslobođen optužbe za korupciju ostane oslobođen, sam u bilo kojoj situaciji kršiti zakon dajući mito.</s>  <s>Gospodin je Celije državi podnio, gospodo suci, dvije tužbe kao taoce koji je osiguravaju od opasnosti, ili kao jamce za svoje dobre namjere.</s>  <s>Zbog toga vas molim i zaklinjem, gospodo suci, u državi u kojoj je, evo, pred nekoliko dana oslobođen gospodin Sekst Klodije, kojeg ste tijekom dvije godine gledali ili kao pomagača pobune ili kao njezina kolovođu, čovjek bez imetka, bez vjerodostojnosti, bez perspektive, bez temelja, bez resursa, okaljanih usta, jezika, ruke, čitava života, čovjek koji je svete hramove, popis imovine rimskog naroda, podatke od opće važnosti zapalio vlastitom rukom, koji je Katulov spomenik oštetio, moj dom srušio, onaj moga brata zapalio, koji je na Palatinu i pred očima grada poticao roblje na masakre, na palež Rima – u takvoj državi nemojte dozvoliti da takva osoba bude oslobođena zbog ženskoga utjecaja, a da gospodin Celije bude ženskoj strasti izručen na milost i nemilost; da se ne bi pokazalo kako je ista žena, sa svojim suprugom i bratom, mogla i zaštititi najgoreg razbojnika i naškoditi najdostojnijem mladiću.</s></p> 
             </div> 
             <div type="textpart"
                  subtype="section"
@@ -910,7 +899,8 @@ Collegii Reginae Socius</title>
                  org="uniform"
                  sample="complete"> 
                <p part="N"> 
-                  <reg instant="false">quod</reg> cum huius vobis adulescentiam proposueritis, constituitote ante oculos etiam huius miseri senectutem qui hoc unico filio nititur, in huius spe requiescit, huius unius casum pertimescit; quem vos supplicem vestrae misericordiae, servum potestatis, abiectum non tam ad pedes quam ad mores sensusque vestros, vel recordatione parentum vestrorum vel liberorum iucunditate sustentate, ut in alterius dolore vel pietati vel indulgentiae vestrae serviatis. <reg instant="false">nolite</reg>, iudices, aut hunc iam natura ipsa occidentem velle maturius exstingui volnere vestro quam suo fato, aut hunc nunc primum florescentem firmata iam stirpe virtutis tamquam turbine aliquo aut subita tempestate pervertere. </p> 
+                  <s>Pa kad budete razmišljali o mladosti ovdje prisutnog, predočite sebi također i starost ovog nesretnika koji se oslanja na svojeg jedinog sina, sve je nade položio u nj, samo od njegova udesa strepi; kad bude ponizno apelirao na vašu samilost, kad se bude podložio vašoj moći, kad se prostre možda ne pred vaše noge, ali pred vaš karakter i stavove, vi, barem sjećajući se svojih roditelja ili ljubeći svoju djecu, dozvolite da se pred tuđom boli pokorite svojoj vlastitoj odanosti ili toleranciji.</s> <s>Nemojte, gospodo suci, odlučiti da ovaj čovjek, koga je već priroda dovela na zalaz života, zgasne prije no što mu je suđeno, i to ranjen vašom rukom; ili da ovaj drugi, sada u prvome cvatu dobi, upravo kad je korijen njegove vrline ojačao, bude iščupan ovom svojevrsnom olujom ili nenadanom nepogodom.</s>
+               </p> 
             </div> 
             <div type="textpart"
                  subtype="section"
@@ -919,7 +909,7 @@ Collegii Reginae Socius</title>
                  org="uniform"
                  sample="complete"> 
                <p part="N"> 
-                  <reg instant="false">conservate</reg> parenti filium, parentem filio, ne aut senectutem iam prope desperatam contempsisse aut adulescentiam plenam spei maximae non modo non aluisse vos verum etiam perculisse atque adflixisse videamini. <reg instant="false">quem</reg> si nobis, si suis, si rei publicae conservatis, addictum, deditum, obstrictum vobis ac liberis vestris habebitis omniumque huius nervorum ac laborum vos potissimum, iudices, fructus uberes diuturnosque capietis. </p>
+                  <s>Sačuvajte ocu sina, oca sinu; ne dozvolite da izgleda da ste prezreli starost koju je već napustila gotovo sva nada, ili da mladost koja silno obećava ne samo niste podržali, već ste je išibali i obogaljili.</s>  <s>Sačuvate li ovog čovjeka za nas, za njegove, za državu, on će biti odan, lojalan, obavezan vama i vašoj djeci, i svih ćete njegovih snaga i napora prvenstveno vi, gospodo suci, ubirati bogate i trajne plodove.</s></p>
             </div>
          </div>
       </body>
