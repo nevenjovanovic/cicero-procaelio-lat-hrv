@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader xml:lang="eng">
+      <fileDesc>
+         <titleStmt>
+	           <title>In Defense of Marcus Caelius </title>
+	           <title>Pro Sex. Roscio, De imperio Cn. Pompei, Pro Cluentio, In Catilinam, Pro Murena, Pro Caelio</title>
+	           <title type="sub">Machine readable text</title>
+	           <author n="Cic.">M. Tullius Cicero</author>
+	           <editor role="editor" n="OCT">Albert Clark</editor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name full="yes" instant="false">Bridget Almas</name>
+               <name full="yes" instant="false">Lisa Cerrato</name>
+               <name full="yes" instant="false">William Merrill</name>
+               <name full="yes" instant="false">David Mimno</name>
+               <name full="yes" instant="false">Rashmi Singhal</name>
+               <name full="yes" instant="false">David Smith</name>
+            </respStmt>
+            <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder> 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release" instant="false">1997-10-28</date>
+         </publicationStmt> 
+         <sourceDesc default="false">
+	           <biblStruct default="false" status="draft">
+	              <monogr>
+	                 <author>M. Tullius Cicero</author>
+	                 <title>M. Tulli Ciceronis Orationes:
+Recognovit brevique adnotatione critica instruxit
+Albertus Curtis Clark
+Collegii Reginae Socius</title>
+	                 <editor role="editor">Albert Curtis Clark</editor>
+	                 <imprint>
+	                    <pubPlace>Oxonii</pubPlace>
+	                    <publisher>e Typographeo Clarendoniano</publisher>
+	                    <date instant="false">1908</date>
+	                 </imprint>
+	                 <biblScope unit="page">319-357</biblScope>
+	              </monogr>
+	              <series>	    
+                  <title>Scriptorum Classicorum Bibliotheca Oxoniensis</title>
+	              </series>
+	              <ref target="https://archive.org/details/orationesrecogno01ciceuoft">Internet Archive</ref>
+	           </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+    
+      <encodingDesc>
+         <refsDecl n="CTS" default="false">
+            <cRefPattern matchPattern="(\w+)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                <p part="N">This pointer pattern extracts section</p>
+            </cRefPattern>
+        </refsDecl>
+         <refsDecl default="false">
+	           <refState unit="section"/>
+         </refsDecl>
+      </encodingDesc>    
+      <profileDesc>
+         <langUsage default="false">
+	           <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+         </langUsage>
+      </profileDesc>
+    
+     <revisionDesc status="draft">
+        <change when="2021-09-11" who="Neven Jovanović" status="draft">Remove all notes and reg elements; tokenize by sentences; change URN</change>
+         <change when="2014-11-06" who="Thibault Clerice" status="draft">Moving to Epidoc with new URN</change>
+         <change when="2015-10-29" who="Thibault Clerice" status="draft">CTS according to Capitains Guidelines + Epidoc</change>
+         <change when="2014-08-01" who="Bridget Almas" status="draft">split section milestones to divs as canonical citation scheme (as decided per GRC). also converted greek in foreign tags  unicode.</change>
+         <change when="2014-07-01" who="Stella Dee" status="draft">split composite text and converted to unicode</change>
+         <change when="2013-09-13" who="balmas01" status="draft">reverting texts back to pre_cts_reorg tagged version</change>
+         <change when="2011-07-19" who="gcrane" status="draft">removed the earlier persName/placeName tags</change>
+         <change when="2011-01-15" who="gcrane" status="draft">base SDL file</change>
+         <change when="2009-10-09" who="rsingh04" status="draft">more reorganizing of texts module by collection</change>
+         <change when="2006-11-03" who="gcrane" status="draft">typo</change>
+         <change when="2006-08-21" who="gcrane" status="draft">small fixes</change>
+         <change when="2006-08-17" who="gcrane" status="draft">typo fixed</change>
+         <change when="2006-04-02" who="gcrane" status="draft">mainly fixes to the words lower cased at the start of sentences: found that we had always had <name full="yes" instant="false">Cum</name> rather than <reg instant="false">cum</reg>. This has been fixed in oct.cic[123] oct.cic[456] are having the app crits added and will need to be updated when those files come back</change>
+         <change when="2005-12-29" who="gcrane" status="draft">this now contains textual notes</change>
+         <change when="2005-11-17" who="gcrane" status="draft">began vestigial app crit</change>
+         <change when="2005-08-01" who="packel" status="draft">removed stray item tags</change>
+         <change when="2005-07-25" who="packel" status="draft">Converted to XML</change>
+         <change when="2005-04-08" who="mimno" status="draft">added default chunks</change>
+         <change when="2004-05-24" who="amahoney" status="draft">experiment with marking abbreviations of praenomina</change>
+         <change when="2003-07-01" who="yorkc" status="draft">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
+         <change when="2002-12-02" who="amahoney" status="draft">correct spelling of Quirites, improperly 'regularized'</change>
+         <change when="2002-01-18" who="amahoney" status="draft">put spaces around mdash because umorphck is confused if there are none</change>
+         <change when="2002-01-18" who="amahoney" status="draft">missed a few 'v' in the small caps</change>
+         <change when="2001-12-31" who="amahoney" status="draft">finish fixing the small caps, partially converted to lower case</change>
+         <change when="2000-03-06" who="amahoney" status="draft">add headers for groups of speeches, so they show up in the toc:  Catilines, Verrines, Philippics, and Agrarian Law</change>
+         <change when="2000-03-04" who="dasmith" status="draft">Added separate funder entity to TEI header.</change>
+         <change when="1999-10-14" who="dasmith" status="draft">Added explanatory subtitles to titleStmt</change>
+         <change when="1999-08-12" who="dasmith" status="draft">Fixed refsDecl</change>
+         <change when="1999-08-04" who="textgod" status="draft">Random changes over a period of months.</change>
+         <change when="1997-08-18" who="textgod" status="draft">???</change>
+         <change when="1997-05-12" who="cjsu" status="draft">Finalized tagging. Passes validation.</change>
+         <change when="1997-05-12" who="textgod" status="draft">Added the rest of volume 1</change>
+         <change when="1997-03-26" who="textgod" status="draft">Added to repository. Passes TEI parse.</change>
+     </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="edition"
+              xml:lang="lat"
+              n="urn:cts:latinLit:phi0474.phi024.croala-lat"
+              part="N"
+              org="uniform"
+              sample="complete">
+            <head>PRO M. CAELIO ORATIO</head> 
+            
+            
+            <div type="textpart"
+                 subtype="section"
+                 n="1"
+                 part="N"
+                 org="uniform"
+                 sample="complete">
+               <milestone n="1" unit="chapter"/> 
+               <p part="N"> 
+                  <s>si quis, iudices, forte nunc adsit ignarus legum iudiciorum consuetudinisque nostrae, miretur profecto quae sit tanta atrocitas huiusce causae, quod diebus festis ludisque publicis, omnibus forensibus negotiis intermissis, unum hoc iudicium exerceatur, nec dubitet quin tanti facinoris reus arguatur ut eo neglecto civitas stare non possit.</s> <s>idem cum audiat esse legem quae de seditiosis consceleratisque civibus qui armati senatum obsederint, magistratibus vim attulerint, rem publicam oppugnarint cotidie quaeri iubeat: legem non improbet, crimen quod versetur in iudicio requirat; cum audiat nullum facinus, nullam audaciam, nullam vim in iudicium vocari, sed adulescentem inlustri ingenio, industria, gratia accusari ab eius filio quem ipse in iudicium et vocet et vocarit, oppugnari autem opibus meretriciis: Atratini ipsius pietatem non reprehendat, libidinem muliebrem comprimendam putet, vos laboriosos existimet quibus otiosis ne in communi quidem otio liceat esse.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="2"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>etenim si attendere diligenter atque existimare vere de omni hac causa volueritis, sic constituetis, iudices, nec descensurum quemquam ad hanc accusationem fuisse cui utrum vellet liceret nec, cum descendisset, quicquam habiturum spei fuisse, nisi alicuius intolerabili libidine et nimis acerbo odio niteretur.</s> <s>sed ego Atratino, humanissimo atque optimo adulescenti, meo necessario, ignosco, qui habet excusationem vel pietatis vel necessitatis vel aetatis.</s> <s>si voluit accusare, pietati tribuo, si iussus est, necessitati, si speravit aliquid, pueritiae.</s> <s>ceteris non modo nihil ignoscendum sed etiam acriter est resistendum.</s> <milestone n="2" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="3"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>ac mihi quidem videtur, iudices, hic introitus defensionis adulescentiae <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arci</ex>
+                     </expan>
+                  </choice> Caeli maxime convenire, ut ad ea quae accusatores deformandi huius causa et detrahendae spoliandaeque dignitatis gratia dixerunt primum respondeam.</s> <s>obiectus est pater varie, quod aut parum splendidus ipse aut parum pie tractatus a filio diceretur.</s> <s>de dignitate <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arcus</ex>
+                     </expan>
+                  </choice> Caelius notis ac maioribus natu etiam sine mea oratione tacitus facile ipse respondet; quibus autem propter senectutem, quod iam diu minus in foro nobiscumque versatur, non aeque est cognitus, hi sic habeant, quaecumque in equite Romano dignitas esse possit, quae certe potest esse maxima, eam semper in <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arco</ex>
+                     </expan>
+                  </choice> Caelio habitam esse summam hodieque haberi non solum a suis sed etiam ab omnibus quibus potuerit aliqua de causa esse notus.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="4"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>equitis autem Romani esse filium criminis loco poni ab accusatoribus neque his iudicantibus oportuit neque defendentibus nobis.</s> <s>nam quod de pietate dixistis, est ista quidem nostra existimatio sed iudicium certe parentis.</s> <s>quid nos opinemur audietis ex iuratis; quid parentes sentiant lacrimae matris incredibilisque maeror, squalor patris et haec praesens maestitia quam cernitis luctusque declarat.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="5"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>nam quod est obiectum municipibus esse adulescentem non probatum suis, nemini umquam praesenti †Praestutiani† maiores honores habuerunt, iudices, quam absenti <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arco</ex>
+                     </expan>
+                  </choice> Caelio; quem et absentem in amplissimum ordinem cooptarunt et ea non petenti detulerunt quae multis petentibus denegarunt.</s> <s>idemque nunc lectissimos viros et nostri ordinis et equites Romanos cum legatione ad hoc iudicium et cum gravissima atque ornatissima laudatione miserunt.</s> <s>videor mihi iecisse fundamenta defensionis meae, quae firmissima sunt si nituntur iudicio suorum.</s> <s>neque enim vobis satis commendata huius aetas esse posset, si non modo parenti, tali viro, verum etiam municipio tam inlustri ac tam gravi displiceret.</s> <milestone n="3" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="6"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"><s>equidem, ut ad me revertar, ab his fontibus profluxi ad hominum famam, et meus hic forensis labor vitaeque ratio demanavit ad existimationem hominum paulo latius commendatione ac iudicio meorum.</s> </p> 
+               <p part="N"> 
+                  <s>nam quod obiectum est de pudicitia quodque omnium accusatorum non criminibus sed vocibus maledictisque celebratum est, id numquam tam acerbe feret <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arcus</ex>
+                     </expan>
+                  </choice> Caelius ut eum paeniteat non deformem esse natum.</s> <s>sunt enim ista maledicta pervolgata in omnis quorum in adulescentia forma et species fuit liberalis.</s> <s>sed aliud est male dicere, aliud accusare.</s> <s>accusatio crimen desiderat, rem ut definiat, hominem notet, argumento probet, teste confirmet; maledictio autem nihil habet propositi praeter contumeliam; quae si petulantius iactatur, convicium, si facetius, urbanitas nominatur.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="7"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>quam quidem partem accusationis admiratus sum et moleste tuli potissimum esse Atratino datam.</s> <s>neque enim decebat neque aetas illa postulabat neque, id quod animum advertere poteratis, pudor patiebatur optimi adulescentis in tali illum oratione versari.</s> <s>vellem aliquis ex vobis robustioribus hunc male dicendi locum suscepisset; aliquanto liberius et fortius et magis more nostro refutaremus istam male dicendi licentiam.</s> <s>tecum, Atratine, agam lenius, quod et pudor tuus moderatur orationi meae et meum erga te parentemque tuum beneficium tueri debeo.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="8"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"><s>illud tamen te esse admonitum volo, primum ut qualis es talem te omnes esse existiment, ut quantum a rerum turpitudine abes tantum te a verborum libertate seiungas; deinde ut ea in alterum ne dicas quae, cum tibi falso responsa sint, erubescas.</s> <s>quis est enim cui via ista non pateat, quis est qui huic aetati atque isti dignitati non possit quam velit petulanter, etiam si sine ulla suspicione, at non sine argumento male dicere?</s> <s>sed istarum partium culpa est eorum qui te agere voluerunt; laus pudoris tui, quod ea te invitum dicere videbamus, ingeni, quod ornate politeque dixisti.</s> <milestone n="4" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="9"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>verum ad istam omnem orationem brevis est defensio.</s> <s>nam quoad aetas <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arci</ex>
+                     </expan>
+                  </choice> Caeli dare potuit isti suspicioni locum, fuit primum ipsius pudore, deinde etiam patris diligentia disciplinaque munita.</s> <s>qui ut huic togam virilem dedit — nihil dicam hoc loco de me; tantum sit quantum vos existimatis; hoc dicam, hunc a patre continuo ad me esse deductum — nemo hunc <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arcum</ex>
+                     </expan>
+                  </choice> Caelium in illo aetatis flore vidit nisi aut cum patre aut mecum aut in <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arci</ex>
+                     </expan>
+                  </choice> Crassi castissima domo cum artibus honestissimis erudiretur.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="10"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>nam quod Catilinae familiaritas obiecta Caelio est, longe ab ista suspicione abhorrere debet.</s> <s>hoc enim adulescente scitis consulatum mecum petisse Catilinam.</s> <s>ad quem si accessit aut si a me discessit umquam — quamquam multi boni adulescentes illi homini nequam atque improbo studuerunt — tum existimetur Caelius Catilinae nimium familiaris fuisse.</s> <s>at enim postea scimus et vidimus esse hunc in illius etiam amicis.</s> <s>quis negat?</s> <s>sed ego illud tempus aetatis quod ipsum sua sponte infirmum, aliorum autem libidine infestum est, id hoc loco defendo.</s> <s>fuit adsiduus mecum praetore me; non noverat Catilinam; Africam tum praetor ille obtinebat.</s> <s>secutus est tum annus, causam de pecuniis repetundis Catilina dixit.</s> <s>mecum erat hic; illi ne advocatus quidem venit umquam.</s> <s>deinceps fuit annus quo ego consulatum petivi; petebat Catilina mecum.</s> <s>numquam ad illum accessit, a me numquam recessit.</s> <milestone n="5" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="11"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>tot igitur annos versatus in foro sine suspicione, sine infamia, studuit Catilinae iterum petenti.</s> <s>quem ergo ad finem putas custodiendam illam aetatem fuisse?</s> <s>nobis quidem olim annus erat unus ad cohibendum bracchium toga constitutus, et ut exercitatione ludoque campestri tunicati uteremur, eademque erat, si statim merere stipendia coeperamus, castrensis ratio ac militaris.</s> <s>qua in aetate nisi qui se ipse sua gravitate et castimonia et cum disciplina domestica tum etiam naturali quodam bono defenderet, quoquo modo a suis custoditus esset, tamen infamiam veram effugere non poterat.</s> <s>sed qui prima illa initia aetatis integra atque inviolata praestitisset, de eius fama ac pudicitia, cum iam sese conroboravisset ac vir inter viros esset, nemo loquebatur.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="12"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>at studuit Catilinae, cum iam aliquot annos esset in foro, Caelius.</s> <s>et multi hoc idem ex omni ordine atque ex omni aetate fecerunt.</s> <s>habuit enim ille, sicuti meminisse vos arbitror, permulta maximarum non expressa signa sed adumbrata virtutum.</s> <s>utebatur hominibus improbis multis; et quidem optimis se viris deditum esse simulabat.</s> <s>erant apud illum inlecebrae libidinum multae; erant etiam industriae quidam stimuli ac laboris.</s> <s>flagrabant vitia libidinis apud illum; vigebant etiam studia rei militaris.</s> <s>neque ego umquam fuisse tale monstrum in terris ullum puto, tam ex contrariis diversisque inter se pugnantibus naturae studiis cupiditatibusque conflatum.</s> <milestone n="6" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="13"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>quis clarioribus viris quodam tempore iucundior, quis turpioribus coniunctior? quis civis meliorum partium aliquando, quis taetrior hostis huic civitati? quis in voluptatibus inquinatior, quis in laboribus patientior? quis in rapacitate avarior, quis in largitione effusior?</s> <s>illa vero, iudices, in illo homine admirabilia fuerunt, comprehendere multos amicitia, tueri obsequio, cum omnibus communicare quod habebat, servire temporibus suorum omnium pecunia, gratia, labore corporis, scelere etiam, si opus esset, et audacia, versare suam naturam et regere ad tempus atque huc et illuc torquere ac flectere, cum tristibus severe, cum remissis iucunde, cum senibus graviter, cum iuventute comiter, cum facinerosis audaciter, cum libidinosis luxuriose vivere.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="14"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>hac ille tam varia multiplicique natura cum omnis omnibus ex terris homines improbos audacisque conlegerat, tum etiam multos fortis viros et bonos specie quadam virtutis adsimulatae tenebat.</s> <s>neque  umquam ex illo delendi huius imperi tam consceleratus impetus exstitisset, nisi tot vitiorum tanta immanitas quibusdam facilitatis et patientiae radicibus niteretur.</s> <s>qua re ista condicio, iudices, respuatur, nec Catilinae familiaritatis crimen haereat.</s> <s>est enim commune cum multis et cum quibusdam bonis.</s> <s>me ipsum, me, inquam, quondam paene ille decepit, cum et civis mihi bonus et optimi cuiusque cupidus et firmus amicus ac fidelis videretur; cuius ego facinora oculis prius quam opinione, manibus ante quam suspicione deprendi.</s> <s>cuius in magnis catervis amicorum si fuit etiam Caelius, magis est ut ipse moleste ferat errasse se, sicuti non numquam in eodem homine me quoque erroris mei paenitet, quam ut istius amicitiae crimen reformidet.</s> <milestone n="7" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="15"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>itaque a maledictis impudicitiae ad coniurationis invidiam oratio est vestra delapsa.</s> <s>posuistis enim, atque id tamen titubanter et strictim, coniurationis hunc propter amicitiam Catilinae participem fuisse; in quo non modo crimen non haerebat sed vix diserti adulescentis cohaerebat oratio.</s> <s>qui enim tantus furor in Caelio, quod tantum aut in moribus naturaque volnus aut in re atque fortuna? ubi denique est in ista suspicione Caeli nomen auditum?</s> <s>nimium multa de re minime dubia loquor; hoc tamen dico.</s> <s>non modo si socius coniurationis, sed nisi inimicissimus istius sceleris fuisset, numquam coniurationis accusatione adulescentiam suam potissimum commendare voluisset.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="16"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>quod haud scio an de ambitu et de criminibus istis sodalium ac sequestrium, quoniam huc incidi, similiter respondendum putem.</s> <s>numquam enim tam Caelius amens fuisset ut, si sese isto infinito ambitu commaculasset, ambitus alterum accusaret, neque eius facti in altero suspicionem quaereret cuius ipse sibi perpetuam licentiam optaret, nec, si sibi semel periculum ambitus subeundum putaret, ipse alterum iterum ambitus crimine arcesseret.</s> <s>quod quamquam nec sapienter et me invito facit, tamen est eius modi cupiditas ut magis insectari alterius innocentiam quam de se timide cogitare videatur.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="17"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>nam quod aes alienum obiectum est, sumptus reprehensi, tabulae flagitatae, videte quam pauca respondeam.</s> <s>tabulas qui in patris potestate est nullas conficit.</s> <s>versuram numquam omnino fecit ullam.</s> <s>sumptus unius generis obiectus est, habitationis; triginta milibus dixistis habitare.</s> <s>nunc demum intellego <choice>
+                     <abbr>P.</abbr>
+                     <expan instant="false">P<ex instant="false">ublii</ex>
+                     </expan>
+                  </choice> Clodi insulam esse venalem, cuius hic in aediculis habitat decem, ut opinor, milibus.</s> <s>vos autem dum illi placere voltis, ad tempus eius mendacium vestrum accommodavistis.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="18"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>reprehendistis a patre quod semigrarit.</s> <s>quod quidem in hac aetate minime reprendendum est.</s> <s>qui cum et ex publica causa iam esset mihi quidem molestam, sibi tamen gloriosam victoriam consecutus et per aetatem magistratus petere posset, non modo permittente patre sed etiam suadente ab eo semigravit et, cum domus patris a foro longe abesset, quo facilius et nostras domus obire et ipse a suis coli posset, conduxit in Palatio non magno domum.</s> <milestone n="8" unit="chapter"/> 
+                  <s>quo loco possum dicere id quod vir clarissimus, <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arcus</ex>
+                     </expan>
+                  </choice> Crassus, cum de adventu regis Ptolemaei quereretur, paulo ante dixit: 
+               Vtinam ne in nemore Pelio — ac longius mihi quidem contexere hoc carmen liceret:  
+                
+                  nam numquam era errans hanc molestiam nobis exhiberet  
+               Medea animo aegro, amore saevo saucia.</s> <s>sic enim, iudices, reperietis quod, cum ad id loci venero, ostendam, hanc Palatinam Medeam migrationemque hanc adulescenti causam sive malorum omnium sive potius sermonum fuisse.</s>
+               </p>
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="19"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>quam ob rem illa quae ex accusatorum oratione praemuniri iam et fingi intellegebam, fretus vestra prudentia, iudices, non pertimesco.</s> <s>aiebant enim fore testem senatorem qui se pontificiis comitiis pulsatum a Caelio diceret.</s> <s>a quo quaeram, si prodierit, primum cur statim nihil egerit, deinde, si id queri quam agere maluerit, cur productus a vobis potius quam ipse per se, cur tanto post potius quam continuo queri maluerit.</s> <s>si mihi ad haec acute arguteque responderit, tum quaeram denique ex quo iste fonte senator emanet.</s> <s>nam si ipse orietur et nascetur ex sese, fortasse, ut soleo, commovebor; sin autem est rivolus arcessitus et ductus ab ipso capite accusationis vestrae, laetabor, cum tanta gratia tantisque opibus accusatio vestra nitatur, unum senatorem esse solum qui vobis gratificari vellet inventum.</s> </p> 
+               <p part="N">
+                     <s>de teste Fufio.</s> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="20"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>nec tamen illud genus alterum nocturnorum testium perhorresco.</s> <s>est enim dictum ab illis fore qui dicerent uxores suas a cena redeuntis attrectatas esse a Caelio.</s> <s>graves erunt homines qui hoc iurati dicere audebunt, cum sit eis confitendum numquam se ne congressu quidem et constituto coepisse de tantis iniuriis experiri.</s> <milestone n="9" unit="chapter"/> 
+                  <s>sed totum genus oppugnationis huius, iudices, et iam prospicitis animis et, cum inferetur, propulsare debebitis.</s> <s>non enim ab isdem accusatur <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arcus</ex>
+                     </expan>
+                  </choice> Caelius a quibus oppugnatur; palam in eum tela iaciuntur, clam subministrantur.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="21"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>neque ego id dico ut invidiosum sit in eos quibus gloriosum etiam hoc esse debet.</s> <s>funguntur officio, defendunt suos, faciunt quod viri fortissimi solent; laesi dolent, irati efferuntur, pugnant lacessiti.</s> <s>sed vestrae sapientiae tamen est, iudices, non, si causa iusta est viris fortibus oppugnandi <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arcum</ex>
+                     </expan>
+                  </choice> Caelium, ideo vobis quoque causam putare esse iustam alieno dolori potius quam vestrae fidei consulendi.</s> <s>iam  quae sit multitudo in foro, quae genera, quae studia, quae varietas hominum videtis.</s> <s>ex hac copia quam multos esse arbitramini qui hominibus potentibus, gratiosis, disertis, cum aliquid eos velle arbitrentur, ultro se offerre soleant, operam navare, testimonium polliceri?</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="22"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>hoc ex genere si qui se in hoc iudicium forte proiecerint, excluditote eorum cupiditatem, iudices, sapientia vestra, ut eodem tempore et huius saluti et religioni vestrae et contra periculosas hominum potentias condicioni omnium civium providisse videamini.</s> <s>equidem vos abducam a testibus neque huius iudici veritatem quae mutari nullo modo potest in voluntate testium conlocari sinam quae facillime fingi, nullo negotio flecti ac detorqueri potest.</s> <s>argumentis agemus, signis luce omni clarioribus crimina refellemus; res cum re, causa cum causa, ratio cum ratione pugnabit.</s> <milestone n="10" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="23"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>itaque illam partem causae facile patior graviter et ornate a <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arco</ex>
+                     </expan>
+                  </choice> Crasso peroratam de seditionibus Neapolitanis, de Alexandrinorum pulsatione Puteolana, de bonis Pallae.</s> <s>vellem  dictum esset ab eodem etiam de Dione.</s> <s>de quo ipso tamen quid est quod exspectetis? quod is qui fecit aut non timet aut etiam fatetur; est enim rex; qui autem dictus est adiutor fuisse et conscius, <choice>
+                     <abbr>P.</abbr>
+                     <expan instant="false">P<ex instant="false">ublius</ex>
+                     </expan>
+                  </choice> Asicius, iudicio est liberatus.</s> <s>quod igitur est eius modi crimen ut qui commisit non neget, qui negavit absolutus sit, id hic pertimescat qui non modo a facti verum etiam a conscientiae suspicione afuit?</s> <s>et, si Asicio causa plus profuit quam nocuit invidia, huic oberit maledictum tuum qui istius facti non modo suspicione sed ne infamia quidem est aspersus?</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="24"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>at praevaricatione est Asicius liberatus.</s> <s>perfacile est isti loco respondere, mihi praesertim a quo illa causa defensa est.</s> <s>sed Caelius optimam causam Asici esse arbitratur; cuicuimodi autem sit, a sua putat esse seiunctam.</s> <s>neque solum Caelius sed etiam adulescentes humanissimi et doctissimi, rectissimis studiis atque optimis artibus praediti, Titus Gaiusque Coponii qui ex omnibus maxime Dionis mortem doluerunt, qui cum doctrinae studio atque humanitatis tum etiam hospitio Dionis tenebantur.</s> <s>habitabat apud Titum, ut audistis, Dio, erat ei cognitus Alexandriae.</s> <s>quid aut hic aut summo splendore praeditus frater eius de <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arco</ex>
+                     </expan>
+                  </choice> Caelio existimet ex ipsis, si producti erunt, audietis.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="25"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>ergo haec removeantur, ut aliquando, in quibus causa nititur, ad ea veniamus.</s> <milestone n="11" unit="chapter"/> 
+                
+                  <s>animadverti enim, iudices, audiri a vobis meum familiarem, <choice>
+                     <abbr>L.</abbr>
+                     <expan instant="false">L<ex instant="false">ucium</ex>
+                     </expan>
+                  </choice> Herennium, perattente.</s> <s>in quo etsi magna ex parte ingenio eius et dicendi genere quodam tenebamini, tamen non numquam verebar ne illa subtiliter ad criminandum inducta oratio ad animos vestros sensim ac leniter accederet.</s> <s>dixit enim multa de luxurie, multa de libidine, multa de vitiis iuventutis, multa de moribus et, qui in reliqua vita mitis esset et in hac suavitate humanitatis qua prope iam delectantur omnes versari periucunde soleret, fuit in hac causa pertristis quidam patruus, censor, magister; obiurgavit <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arcum</ex>
+                     </expan>
+                  </choice> Caelium, sicut neminem umquam parens; multa de incontinentia intemperantiaque disseruit.</s> <s>quid quaeritis, iudices? ignoscebam vobis attente audientibus, propterea quod egomet tam triste illud, tam asperum genus orationis horrebam.</s></p>
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="26"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>ac prima pars fuit illa quae me minus movebat, fuisse meo necessario Bestiae Caelium familiarem, cenasse apud eum, ventitasse domum, studuisse praeturae.</s> <s>non me haec movent quae perspicue falsa sunt; etenim eos una cenasse dixit qui aut absunt aut quibus necesse est idem dicere.</s> <s>neque vero illud me commovet quod sibi in Lupercis sodalem esse Caelium dixit.</s> <s>fera quaedam sodalitas et plane pastoricia atque agrestis germanorum Lupercorum, quorum coitio illa silvestris ante est instituta quam humanitas atque leges, si quidem non modo nomina deferunt inter se sodales sed etiam commemorant sodalitatem in accusando, ut ne quis id forte nesciat timere videantur!</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="27"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>sed haec omitto; ad illa quae me magis moverunt respondeo.</s> 
+                  <s>deliciarum obiurgatio fuit longa, etiam lenior, plusque disputationis habuit quam atrocitatis, quo etiam audita est attentius.</s> <s>nam 
+                  <choice>
+                     <abbr>P.</abbr>
+                     <expan instant="false">P<ex instant="false">ublius</ex>
+                     </expan>
+                  </choice> Clodius, amicus meus, cum se gravissime vehementissimeque iactaret et omnia inflammatus ageret tristissimis verbis, voce maxima, tametsi probabam eius eloquentiam, tamen non pertimescebam; aliquot enim in causis eum videram frustra litigantem.</s> <s>tibi autem, Balbe, respondeo primum precario, si licet, si fas est defendi a me eum qui nullum convivium renuerit, qui in hortis fuerit, qui unguenta sumpserit, qui Baias viderit.</s> <milestone n="12" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="28"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>equidem multos et vidi in hac civitate et audivi, non modo qui primoribus labris gustassent genus hoc vitae et extremis, ut dicitur, digitis attigissent sed qui totam adulescentiam voluptatibus dedidissent, emersisse aliquando et se ad frugem bonam, ut dicitur, recepisse gravisque homines atque inlustris fuisse.</s> <s>datur enim concessu omnium huic aliqui ludus aetati, et ipsa natura profundit adulescentiae cupiditates.</s> <s>quae si ita erumpunt ut nullius vitam labefactent, nullius domum evertant, faciles et tolerabiles haberi solent.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="29"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>sed tu mihi videbare ex communi infamia iuventutis aliquam invidiam Caelio velle conflare.</s> <s>itaque omne illud silentium quod est orationi tributum tuae fuit ob eam causam quod uno reo proposito de multorum vitiis cogitabamus.</s> <s>facile est accusare luxuriem.</s> <s>dies iam me deficiat, si quae dici in eam sententiam possunt coner expromere; de corruptelis, de adulteriis, de protervitate, de sumptibus immensa oratio est.</s> <s>ut tibi reum neminem sed vitia ista proponas, res tamen ipsa et copiose et graviter accusari potest.</s> <s>sed vestrae sapientiae, iudices, est non abduci ab reo nec, quos aculeos habeat severitas gravitasque vestra, cum eos accusator erexerit in rem, in vitia, in mores, in tempora, emittere in hominem et in reum, cum is non suo crimine sed multorum vitio sit in quoddam odium iniustum vocatus.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="30"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>itaque ego severitati tuae ita ut oportet respondere non audeo.</s> <s>erat enim meum deprecari vacationem adulescentiae veniamque petere.</s> <s>non, inquam, audeo; perfugiis nihil utor aetatis, concessa omnibus iura dimitto; tantum peto ut, si qua est invidia communis hoc tempore aeris alieni, petulantiae, libidinum iuventutis, quam video esse magnam, tamen ne huic aliena peccata, ne aetatis ac temporum vitia noceant.</s> <s>atque ego idem qui haec postulo quin criminibus quae in hunc proprie conferuntur diligentissime respondeam non recuso.</s> <milestone n="13" unit="chapter"/> 
+               
+                  <s>sunt autem duo crimina, auri et veneni; in quibus una atque eadem persona versatur.</s> <s>aurum sumptum a Clodia, venenum quaesitum quod Clodiae daretur, ut dicitur.</s> <s>omnia  sunt alia non crimina sed maledicta, iurgi petulantis magis quam publicae quaestionis.</s> <s>»adulter, impudicus, sequester« convicium est, non accusatio.</s> <s>nullum est enim fundamentum horum criminum, nullae sedes; voces sunt contumeliosae temere ab irato accusatore nullo auctore emissae.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="31"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"><s>horum duorum criminum video auctorem, video fontem, video certum nomen et caput.</s> <s>auro opus fuit; sumpsit a Clodia, sumpsit sine teste, habuit quamdiu voluit.</s> <s>maximum video signum cuiusdam egregiae familiaritatis.</s> <s>necare  eandem voluit; quaesivit venenum, sollicitavit servos, potionem paravit, locum constituit, clam attulit.</s> <s>magnum rursus odium video cum crudelissimo discidio exstitisse.</s> <s>res est omnis in hac causa nobis, iudices, cum Clodia, muliere non solum nobili verum etiam nota; de qua ego nihil dicam nisi depellendi criminis causa.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="32"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>sed intellegis pro tua praestanti prudentia, <choice>
+                     <abbr>Cn.</abbr>
+                     <expan instant="false">G<ex instant="false">naei</ex>
+                     </expan>
+                  </choice> Domiti, cum hac sola rem esse nobis.</s> <s>quae si se aurum Caelio commodasse non dicit, si venenum ab hoc sibi paratum esse non arguit, petulanter facimus, si matrem familias secus quam matronarum sanctitas postulat nominamus.</s> <s>sin ista muliere remota nec crimen ullum nec opes ad oppugnandum <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arcum</ex>
+                     </expan>
+                  </choice> Caelium illis relinquuntur, quid est aliud quod nos patroni facere debeamus, nisi ut eos qui insectantur repellamus?</s> <s>quod quidem facerem vehementius, nisi intercederent mihi inimicitiae cum istius mulieris viro — fratrem volui dicere; semper hic erro.</s> <s>nunc agam modice nec longius progrediar quam me mea fides et causa ipsa coget: nec enim muliebris umquam inimicitias mihi gerendas putavi, praesertim cum ea quam omnes semper amicam omnium potius quam cuiusquam inimicam putaverunt.</s> <milestone n="14" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="33"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>sed tamen ex ipsa quaeram prius utrum me secum severe et graviter et prisce agere malit, an remisse et leniter et urbane.</s> <s>si illo austero more ac modo, aliquis mihi ab inferis excitandus est ex barbatis illis, non hac barbula qua ista delectatur sed illa horrida quam in statuis antiquis atque imaginibus videmus, qui obiurget mulierem et qui pro me loquatur ne mihi ista forte suscenseat.</s> <s>exsistat igitur ex hac ipsa familia aliquis ac potissimum Caecus ille; minimum enim dolorem capiet qui istam non videbit.</s> <s>qui profecto, si exstiterit, sic aget ac sic loquetur:</s> <s>»mulier, quid tibi cum Caelio, quid cum homine adulescentulo, quid cum alieno?</s> <s>cur aut tam familiaris fuisti ut aurum commodares, aut tam inimica ut venenum timeres?</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="34"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"><s>non patrem tuum videras, non patruum, non avum, non proavum, non  atavum audieras consules fuisse; non denique modo te <choice>
+                     <abbr>Q.</abbr>
+                     <expan instant="false">Q<ex instant="false">uinti</ex>
+                     </expan>
+               </choice> Metelli matrimonium tenuisse sciebas, clarissimi ac fortissimi viri patriaeque amantissimi, qui simul ac pedem limine extulerat, omnis prope civis virtute, gloria, dignitate superabat?</s> <s>cum ex amplissimo genere in familiam clarissimam nupsisses, cur tibi Caelius tam coniunctus fuit?</s> <s>cognatus, adfinis, viri tui familiaris? nihil eorum.</s> <s>quid igitur fuit nisi quaedam temeritas ac libido?</s> <s>nonne te, si nostrae imagines viriles non commovebant, ne progenies quidem mea, <choice>
+                  <abbr>Q.</abbr>
+                  <expan instant="false">Q<ex instant="false">uinta</ex>
+                  </expan>
+               </choice> illa Claudia, aemulam domesticae laudis in gloria muliebri esse admonebat, non virgo illa Vestalis Claudia quae patrem complexa triumphantem ab inimico tribuno plebei de curru detrahi passa non est?</s> <s>cur te fraterna vitia potius quam bona paterna et avita et usque a nobis cum in viris tum etiam in feminis repetita moverunt?</s> <s>ideone ego pacem Pyrrhi diremi ut tu amorum turpissimorum cotidie foedera ferires, ideo aquam adduxi ut ea tu inceste uterere, ideo viam munivi ut eam tu alienis viris comitata celebrares?«</s> <milestone n="15" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="35"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>sed quid ego, iudices, ita gravem personam induxi ut verear ne se idem Appius repente convertat et Caelium incipiat accusare illa sua gravitate censoria?</s> <s>sed videro hoc posterius atque ita, iudices, ut vel severissimis disceptatoribus <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arci</ex>
+                     </expan>
+                  </choice> Caeli vitam me probaturum esse confidam.</s> <s>tu vero, mulier — iam enim ipse tecum nulla persona introducta loquor — si ea quae facis, quae dicis, quae insimulas, quae moliris, quae arguis, probare cogitas, rationem tantae familiaritatis, tantae consuetudinis, tantae coniunctionis reddas atque exponas necesse est.</s> <s>accusatores quidem libidines, amores, adulteria, Baias, actas, convivia, comissationes, cantus, symphonias, navigia iactant, idemque significant nihil se te invita dicere.</s> <s>quae tu quoniam mente nescio qua effrenata atque praecipiti in forum deferri iudiciumque voluisti, aut diluas oportet ac falsa esse doceas aut nihil neque crimini tuo neque testimonio credendum esse fateare.</s> <milestone n="16" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="36"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>sin autem urbanius me agere mavis, sic agam tecum.</s><s> removebo illum senem durum ac paene agrestem; ex his igitur sumam aliquem ac potissimum minimum fratrem qui est in isto genere urbanissimus; qui te amat plurimum, qui propter nescio quam, credo, timiditatem et nocturnos quosdam inanis metus tecum semper pusio cum maiore sorore cubitabat.</s> <s>Eum putato tecum loqui:</s> <s>»quid tumultuaris, soror? quid insanis?</s> 
+                  <s>quid clamorem exorsa verbis parvam rem magnam facis?</s> <s>vicinum adulescentulum aspexisti; candor huius te et proceritas voltus oculique pepulerunt; saepius videre voluisti; fuisti non numquam in isdem hortis; vis nobilis mulier illum filium familias patre parco ac tenaci habere tuis copiis devinctum.</s> <s>non potes; calcitrat, respuit, repellit, non putat tua dona esse tanti.</s> <s>confer te alio.</s> <s>habes hortos ad Tiberim ac diligenter eo loco paratos quo omnis iuventus natandi causa venit; hinc licet condiciones cotidie legas; cur huic qui te spernit molesta es?«</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="37"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>redeo nunc ad te, Caeli, vicissim ac mihi auctoritatem patriam severitatemque suscipio.</s> <s>sed dubito quem patrem potissimum sumam, Caecilianumne aliquem vehementem atque durum:</s> 
+                  <s>»nunc enim demum mi animus ardet, nunc meum cor cumulatur ira«</s> <s>aut illum:</s> <s>»O infelix, o sceleste!«</s> <s>ferrei sunt isti patres: 
+                  »egone quid dicam, quid velim? quae tu omnia 
+                  tuis foedis factis facis ut nequiquam velim,« vix ferendi.</s> <s>diceret talis pater:</s> <s>»cur te in istam vicinitatem meretriciam contulisti?</s> <s>cur inlecebris cognitis non refugisti?</s>  <s>cur alienam ullam mulierem nosti?</s> <s>Dide ac dissice;
+                     per me tibi licet.</s> <s>si egebis, tibi dolebit, non mihi.</s> 
+                     <s>mihi sat est qui aetatis quod relicuom est oblectem meae.«</s> 
+                   
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="38"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>huic tristi ac derecto seni responderet Caelius se nulla cupiditate inductum de via decessisse.</s> <s>quid signi?</s> <s>nulli sumptus, nulla iactura, nulla versura.</s> <s>at fuit fama.</s> <s>quotus quisque istam effugere potest, praesertim in tam maledica civitate?</s> <s>vicinum eius mulieris miraris male audisse cuius frater germanus sermones iniquorum effugere non potuit?</s> <s>leni vero et clementi patre cuius modi ille est: »fores ecfregit, restituentur; discidit
+                     vestem, resarcietur,« Caeli causa est expeditissima.</s> <s>quid enim esset in quo se non facile defenderet?</s> <s>nihil iam in istam mulierem dico; sed, si esset aliqua dissimilis istius quae se omnibus pervolgaret, quae haberet palam decretum semper aliquem, cuius in hortos, domum, Baias iure suo libidines omnium commearent, quae etiam aleret adulescentis et parsimoniam patrum suis sumptibus sustineret; si vidua libere, proterva petulanter, dives effuse, libidinosa meretricio more viveret, adulterum ego putarem si quis hanc paulo liberius salutasset?</s> <milestone n="17" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="39"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>dicet aliquis:</s> <s>»haec igitur est tua disciplina?</s> <s>sic tu instituis adulescentis?</s> <s>ob hanc causam tibi hunc puerum parens commendavit et tradidit, ut in amore atque in voluptatibus adulescentiam suam conlocaret, et ut hanc tu vitam atque haec studia defenderes?«</s> <s>ego, si quis, iudices, hoc robore animi atque hac indole virtutis ac continentiae fuit ut respueret omnis voluptates omnemque vitae suae cursum in labore corporis atque in animi contentione conficeret, quem non quies, non remissio, non aequalium studia, non ludi, non convivium delectaret, nihil in vita expetendum putaret nisi quod esset cum laude et cum dignitate coniunctum, hunc mea sententia divinis quibusdam bonis instructum atque ornatum puto.</s> <s>ex hoc genere illos fuisse arbitror Camillos, Fabricios, Curios, omnisque eos qui haec ex minimis tanta fecerunt.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="40"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>verum haec genera virtutum non solum in moribus nostris sed vix iam in libris reperiuntur.</s> <s>chartae quoque quae illam pristinam severitatem continebant obsoleverunt; neque solum apud nos qui hanc sectam rationemque vitae re magis quam verbis secuti sumus sed etiam apud Graecos, doctissimos homines, quibus, cum facere non possent, loqui tamen et scribere honeste et magnifice licebat, alia quaedam mutatis Graeciae temporibus praecepta exstiterunt.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="41"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>itaque alii voluptatis causa omnia sapientes facere dixerunt, neque ab hac orationis turpitudine eruditi homines refugerunt; alii cum voluptate dignitatem coniungendam putaverunt, ut res maxime inter se repugnantis dicendi facultate coniungerent; illud unum derectum iter ad laudem cum labore qui probaverunt, prope soli iam in scholis sunt relicti.</s> <s>multa enim nobis blandimenta natura ipsa genuit quibus sopita virtus coniveret interdum; multas vias adulescentiae lubricas ostendit quibus illa insistere aut ingredi sine casu aliquo ac prolapsione vix posset; multarum rerum iucundissimarum varietatem dedit qua non modo haec aetas sed etiam iam conroborata caperetur.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="42"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>quam ob rem si quem forte inveneritis qui aspernetur oculis pulchritudinem rerum, non odore ullo, non tactu, non sapore capiatur, excludat auribus omnem suavitatem, huic homini ego fortasse et pauci deos propitios, plerique autem iratos putabunt.</s> <milestone n="18" unit="chapter"/> 
+                  <s>ergo haec deserta via et inculta atque interclusa iam frondibus et virgultis relinquatur.</s> <s>detur aliqui ludus aetati; sit adulescentia liberior; non omnia voluptatibus denegentur; non semper superet vera illa et derecta ratio; vincat aliquando cupiditas voluptasque rationem, dum modo illa in hoc genere praescriptio moderatioque teneatur.</s> <s>parcat iuventus pudicitiae suae, ne spoliet alienam, ne effundat patrimonium, ne faenore trucidetur, ne incurrat in alterius domum atque familiam, ne probrum castis, labem integris, infamiam bonis inferat, ne quem vi terreat, ne intersit insidiis, scelere careat.</s> <s>postremo cum paruerit voluptatibus, dederit aliquid temporis ad ludum aetatis atque ad inanis hasce adulescentiae cupiditates, revocet se aliquando ad curam rei domesticae, rei forensis reique publicae, ut ea quae ratione antea non perspexerat satietate abiecisse et experiendo contempsisse videatur.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="43"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>ac multi quidem et nostra et patrum maiorumque memoria, iudices, summi homines et clarissimi cives fuerunt quorum, cum adulescentiae cupiditates defervissent, eximiae virtutes firmata iam aetate exstiterunt.</s> <s>ex quibus neminem mihi libet nominare; vosmet vobiscum recordamini.</s> <s>nolo enim cuiusquam fortis atque inlustris viri ne minimum quidem erratum cum maxima laude coniungere.</s> <s>quod si facere vellem, multi a me summi atque ornatissimi viri praedicarentur quorum partim nimia libertas in adulescentia, partim profusa luxuries, magnitudo aeris alieni, sumptus, libidines nominarentur, quae multis postea virtutibus obtecta adulescentiae qui vellet excusatione defenderet.</s> <milestone n="19" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="44"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>at vero in <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arco</ex>
+                     </expan>
+                  </choice> Caelio — dicam enim iam confidentius de studiis eius honestis, quoniam audeo quaedam fretus vestra sapientia libere confiteri — nulla luxuries reperietur, nulli sumptus, nullum aes alienum, nulla conviviorum ac lustrorum libido.</s> <s>quod quidem vitium ventris et gurgitis non modo non minuit aetas hominibus sed etiam auget.</s> <s>amores autem et deliciae quae vocantur, quae firmiore animo praeditis diutius molestae non solent esse — mature enim et celeriter deflorescunt — numquam hunc occupatum impeditumve tenuerunt.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="45"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"><s>audistis cum pro se diceret, audistis antea cum accusaret — defendendi haec causa, non gloriandi loquor — genus orationis, facultatem, copiam sententiarum atque verborum, quae vestra prudentia est, perspexistis.</s> <s>atque in eo non solum ingenium elucere eius videbatis, quod saepe, etiam si industria non alitur, valet tamen ipsum suis viribus, sed inerat, nisi me propter benivolentiam forte fallebat, ratio et bonis artibus instituta et cura et vigiliis elaborata.</s> <s>atqui  scitote, iudices, eas cupiditates quae obiciuntur Caelio atque haec studia de quibus disputo non facile in eodem homine esse posse.</s> <s>fieri enim non potest ut animus libidini deditus, amore, desiderio, cupiditate, saepe nimia copia, inopia etiam non numquam impeditus hoc quicquid est quod nos facimus in dicendo, quoquo modo facimus, non modo agendo verum etiam cogitando possit sustinere.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="46"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>an vos aliam causam esse ullam putatis cur in tantis praemiis eloquentiae, tanta voluptate dicendi, tanta laude, tanta gratia, tanto honore, tam sint pauci semperque fuerint qui in hoc labore versentur?</s> <s>obterendae sunt omnes voluptates, relinquenda studia delectationis, ludus, iocus, convivium, sermo paene est familiarium deserendus.</s> <s>qua re in hoc genere labor offendit homines a studioque deterret, non quo aut ingenia deficiant aut doctrina puerilis.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="47"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>an hic, si sese isti vitae dedidisset, consularem hominem admodum adulescens in iudicium vocavisset?</s> <s>hic, si laborem fugeret, si obstrictus voluptatibus teneretur, hac in acie cotidie versaretur, appeteret inimicitias, in iudicium vocaret, subiret periculum capitis, ipse inspectante populo Romano tot iam mensis aut de salute aut de gloria dimicaret?</s> <milestone n="20" unit="chapter"/> 
+                  <s>nihilne igitur illa vicinitas redolet, nihilne hominum fama, nihil Baiae denique ipsae loquuntur?</s> <s>illae vero non loquuntur solum verum etiam personant, huc unius mulieris libidinem esse prolapsam ut ea non modo solitudinem ac tenebras atque haec flagitiorum integumenta non quaerat sed in turpissimis rebus frequentissima celebritate et clarissima luce laetetur.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="48"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>verum si quis est qui etiam meretriciis amoribus interdictum iuventuti putet, est ille quidem valde severus — negare non possum — sed abhorret non modo ab huius saeculi licentia verum etiam a maiorum consuetudine atque concessis.</s> <s>quando enim hoc non factitatum est, quando reprehensum, quando non permissum, quando denique fuit ut quod licet non liceret?</s> <s>hic ego ipsam rem definiam, mulierem nullam nominabo; tantum in medio relinquam.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="49"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>si quae non nupta mulier domum suam patefecerit omnium cupiditati palamque sese in meretricia vita conlocarit, virorum alienissimorum conviviis uti instituerit, si hoc in urbe, si in hortis, si in Baiarum illa celebritate faciat, si denique ita sese gerat non incessu solum sed ornatu atque comitatu, non flagrantia oculorum, non libertate sermonum, sed etiam complexu, osculatione, actis, navigatione, conviviis, ut non solum meretrix sed etiam proterva meretrix procaxque videatur: cum hac si qui adulescens forte fuerit, utrum hic tibi, <choice>
+                     <abbr>L.</abbr>
+                     <expan instant="false">L<ex instant="false">uci</ex>
+                     </expan>
+                  </choice> Herenni, adulter an amator, expugnare pudicitiam an explere libidinem voluisse videatur?</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="50"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>obliviscor iam iniurias tuas, Clodia, depono memoriam doloris mei; quae abs te crudeliter in meos me absente facta sunt neglego; ne sint haec in te dicta quae dixi.</s> <s>sed ex te ipsa requiro, quoniam et crimen accusatores abs te et testem eius criminis te ipsam dicunt se habere.</s> <s>si quae mulier sit eius modi qualem ego paulo ante descripsi, tui dissimilis, vita institutoque meretricio, cum hac aliquid adulescentem hominem habuisse rationis num tibi perturpe aut perflagitiosum esse videatur?</s> <s>ea si tu non es, sicut ego malo, quid est quod obiciant Caelio?</s> <s>sin eam te volunt esse, quid est cur nos crimen hoc, si tu contemnis, pertimescamus?</s> <s>qua re nobis da viam rationemque defensionis.</s> <s>aut enim pudor tuus defendet nihil a <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arco</ex>
+                     </expan>
+                  </choice> Caelio petulantius esse factum, aut impudentia et huic et ceteris magnam ad se defendendum facultatem dabit.</s> <milestone n="21" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="51"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>sed quoniam emersisse iam e vadis et scopulos praetervecta videtur esse oratio mea, perfacilis mihi reliquus cursus ostenditur.</s> <s>duo sunt enim crimina una in muliere summorum facinorum, auri quod sumptum a Clodia dicitur, et veneni quod eiusdem Clodiae necandae causa parasse Caelium criminantur.</s> <s>aurum sumpsit, ut dicitis, quod <abbr>L.</abbr> Luccei servis daret, per quos Alexandrinus Dio qui tum apud Lucceium habitabat necaretur.</s> <s>Magnum crimen vel in legatis insidiandis vel in servis ad hospitem domini necandum sollicitandis, plenum sceleris consilium, plenum audaciae!</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="52"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>quo quidem in crimine primum illud requiro, dixeritne Clodiae quam ob rem aurum sumeret, an non dixerit.</s> <s>si non dixit, cur dedit?</s> <s>si dixit, eodem se conscientiae scelere devinxit.</s> <s>tune aurum ex armario tuo promere ausa es, tune Venerem illam tuam spoliare ornamentis, spoliatricem ceterorum, cum scires quantum ad facinus aurum hoc quaereretur, ad necem legati, ad <choice>
+                     <abbr>L.</abbr>
+                     <expan instant="false">L<ex instant="false">ucii</ex>
+                     </expan>
+                  </choice> Luccei, sanctissimi hominis atque integerrimi, labem sceleris sempiternam?</s> <s>huic facinori tanto tua mens liberalis conscia, tua domus popularis ministra, tua denique hospitalis illa Venus adiutrix esse non debuit.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="53"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>vidit hoc Balbus; celatam esse Clodiam dixit, atque ita Caelium ad illam attulisse, se ad ornatum ludorum aurum quaerere.</s> <s>si tam familiaris erat Clodiae quam tu esse vis cum de libidine eius tam multa dicis, dixit profecto quo vellet aurum; si tam familiaris non erat, non dedit.</s> <s>ita si verum tibi Caelius dixit, o immoderata mulier, sciens tu aurum ad facinus dedisti; si non est ausus dicere, non dedisti.</s> <milestone n="22" unit="chapter"/> 
+                  <s>quid ego nunc argumentis huic crimini, quae sunt innumerabilia, resistam?</s> <s>possum dicere mores <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arci</ex>
+                     </expan>
+                  </choice> Caeli longissime a tanti sceleris atrocitate esse disiunctos; minime esse credendum homini tam ingenioso tamque prudenti non venisse in mentem rem tanti sceleris ignotis alienisque servis non esse credendam.</s> <s>possum etiam alia et ceterorum patronorum et mea consuetudine ab accusatore perquirere, ubi sit congressus cum servis Luccei Caelius, qui ei fuerit aditus; si per se, qua temeritate! si per alium, per quem?</s> <s>possum omnis latebras suspicionum peragrare dicendo; non causa, non locus, non facultas, non conscius, non perficiendi, non occultandi malefici spes, non ratio ulla, non vestigium maximi facinoris reperietur.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="54"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>sed haec quae sunt oratoris propria, quae mihi non propter ingenium meum sed propter hanc exercitationem usumque dicendi fructum aliquem ferre potuissent, cum a me ipso elaborata proferri viderentur, brevitatis causa relinquo omnia.</s> <s>habeo enim, iudices, quem vos socium vestrae religionis iurisque iurandi facile esse patiamini, <choice>
+                     <abbr>L.</abbr>
+                     <expan instant="false">L<ex instant="false">ucium</ex>
+                     </expan>
+                  </choice> Lucceium, sanctissimum hominem et gravissimum testem, qui tantum facinus in famam atque in fortunas suas neque non audisset inlatum a <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arco</ex>
+                     </expan>
+                  </choice> Caelio neque neglexisset neque tulisset.</s> <s>an ille vir illa humanitate praeditus, illis studiis, illis artibus atque doctrina illius ipsius periculum quem propter haec ipsa studia diligebat, neglegere potuisset et, quod facinus in alienum hominem intentum severe acciperet, id omisisset curare in hospitem?</s> <s>quod per ignotos actum si comperisset doleret, id a suis servis temptatum esse neglegeret?</s> <s>quod in agris locisve publicis factum reprehenderet, id in urbe ac domi suae coeptum esse leniter ferret?</s> <s>quod in alicuius agrestis periculo non praetermitteret, id homo eruditus in insidiis doctissimi hominis dissimulandum putaret?</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="55"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>sed cur diutius vos, iudices, teneo?</s> <s>ipsius iurati religionem auctoritatemque percipite atque omnia diligenter testimoni verba cognoscite.</s> <s>recita.</s>  
+                     <s><choice>
+                        <abbr>L.</abbr>
+                        <expan instant="false">L<ex instant="false">ucii</ex>
+                        </expan>
+                     </choice> Luccei testimonium.</s> 
+                  <s>quid exspectatis amplius?</s> <s>an aliquam vocem putatis ipsam pro se causam et veritatem posse mittere?</s> <s>haec est innocentiae defensio, haec ipsius causae oratio, haec una vox veritatis.</s> <s>in crimine ipso nulla suspicio est, in re nihil est argumenti, in negotio quod actum esse dicitur nullum vestigium sermonis, loci, temporis; nemo testis, nemo conscius nominatur, totum crimen profertur ex inimica, ex infami, ex crudeli, ex facinerosa, ex libidinosa domo.</s> <s>domus autem illa quae temptata esse scelere isto nefario dicitur plena est integritatis, dignitatis, offici, religionis; ex qua domo recitatur vobis iure iurando devincta auctoritas, ut res minime dubitanda in contentione ponatur, utrum temeraria, procax, irata mulier finxisse crimen, an gravis sapiens moderatusque vir religiose testimonium dixisse videatur.</s> <milestone n="23" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="56"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>reliquum est igitur crimen de veneno; cuius ego nec principium invenire neque evolvere exitum possum.</s> <s>quae fuit enim causa quam ob rem isti mulieri venenum dare vellet Caelius?</s> <s>ne aurum redderet?</s> <s>num petivit?</s> <s>ne crimen haereret?</s> <s>num quis obiecit?</s> <s>num quis denique fecisset mentionem, si hic nullius nomen detulisset?</s> <s>quin etiam <choice>
+                     <abbr>L.</abbr>
+                     <expan instant="false">L<ex instant="false">ucium</ex>
+                     </expan>
+                  </choice> Herennium dicere audistis verbo se molestum non futurum fuisse Caelio, nisi iterum eadem de re suo familiari absoluto nomen hic detulisset.</s> <s>credibile est igitur tantum facinus nullam ob causam esse commissum?</s> <s>et vos non videtis fingi sceleris maximi crimen ut alterius sceleris suscipiendi fuisse causa videatur?</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="57"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>cui denique commisit, quo adiutore usus est, quo socio, quo conscio, cui tantum facinus, cui se, cui salutem suam credidit?</s> <s>servisne mulieris?</s> <s>sic enim est obiectum.</s> <s>et erat tam demens is cui vos ingenium certe tribuitis, etiam si cetera inimica oratione detrahitis, ut omnis suas fortunas alienis servis committeret?</s> <s>at quibus servis? — refert enim magno opere id ipsum — eisne quos intellegebat non communi condicione servitutis uti sed licentius liberius familiariusque cum domina vivere?</s> <s>quis enim hoc non videt, iudices, aut quis ignorat, in eius modi domo in qua mater familias meretricio more vivat, in qua nihil geratur quod foras proferendum sit, in qua inusitatae libidines, luxuries, omnia denique inaudita vitia ac flagitia versentur, hic servos non esse servos, quibus omnia committantur, per quos gerantur, qui versentur isdem in voluptatibus, quibus occulta credantur, ad quos aliquantum etiam ex cotidianis sumptibus ac luxurie redundet?</s> <s>id igitur Caelius non videbat?</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="58"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>si enim tam familiaris erat mulieris quam vos voltis, istos quoque servos familiaris dominae esse sciebat.</s> <s>sin ei tanta consuetudo quanta a vobis inducitur non erat, quae cum servis eius potuit familiaritas esse tanta?</s> <milestone n="24" unit="chapter"/> 
+                  <s>ipsius autem veneni quae ratio fingitur?</s> <s>ubi quaesitum est, quem ad modum paratum, quo pacto, cui, quo in loco traditum?</s> <s>habuisse aiunt domi vimque eius esse expertum in servo quodam ad eam rem ipsam parato; cuius perceleri interitu esse ab hoc comprobatum venenum.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="59"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>pro di immortales! cur interdum in hominum sceleribus maximis aut conivetis aut praesentis fraudis poenas in diem reservatis?</s> vidi<s> enim, vidi et illum hausi dolorem vel acerbissimum in vita, cum <choice>
+                     <abbr>Q.</abbr>
+                     <expan instant="false">Q<ex instant="false">uintus</ex>
+                     </expan>
+                  </choice> Metellus abstraheretur e sinu gremioque patriae, cumque ille vir qui se natum huic imperio putavit tertio die post quam in curia, quam in rostris, quam in re publica floruisset, integerrima aetate, optimo habitu, maximis viribus eriperetur indignissime bonis omnibus atque universae civitati.</s> <s>quo quidem tempore ille moriens, cum iam ceteris ex partibus oppressa mens esset, extremum sensum ad memoriam rei publicae reservabat, cum me intuens flentem significabat interruptis ac morientibus vocibus quanta inpenderet procella mihi, quanta tempestas civitati et cum parietem saepe feriens eum qui cum <choice>
+                     <abbr>Q.</abbr>
+                     <expan instant="false">Q<ex instant="false">uinto</ex>
+                     </expan>
+                  </choice> Catulo fuerat ei communis crebro Catulum, saepe me, saepissime rem publicam nominabat, ut non tam se mori quam spoliari suo praesidio cum patriam tum etiam me doleret.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="60"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>quem quidem virum si nulla vis repentini sceleris sustulisset, quonam modo ille furenti fratri suo consularis restitisset qui consul incipientem furere atque tonantem sua se manu interfecturum audiente senatu dixerit?</s> <s>ex hac igitur domo progressa ista mulier de veneni celeritate dicere audebit?</s> <s>nonne ipsam domum metuet ne quam vocem eiciat, non parietes conscios, non noctem illam funestam ac luctuosam perhorrescet?</s> <s>sed revertor ad crimen; etenim haec facta illius clarissimi ac fortissimi viri mentio et vocem meam fletu debilitavit et mentem dolore impedivit.</s> <milestone n="25" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="61"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>sed tamen venenum unde fuerit, quem ad modum paratum sit non dicitur.</s> <s>datum esse aiunt huic <choice>
+                     <abbr>P.</abbr>
+                     <expan instant="false">P<ex instant="false">ublio</ex>
+                     </expan>
+                  </choice> Licinio, pudenti adulescenti et bono, Caeli familiari; constitutum esse cum servis ut venirent ad balneas Senias; eodem Licinium esse venturum atque eis veneni pyxidem traditurum.</s> <s>hic primum illud requiro, quid attinuerit ferri in eum locum constitutum, cur illi servi non ad Caelium domum venerint.</s> <s>si manebat tanta illa consuetudo Caeli, tanta familiaritas cum Clodia, quid suspicionis esset si apud Caelium mulieris servus visus esset?</s> <s>sin autem iam suberat simultas, exstincta erat consuetudo, discidium exstiterat, hinc illae lacrimae nimirum et haec causa est omnium horum scelerum atque criminum.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="62"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"><s>»immo« inquit »cum servi ad dominam rem totam et maleficium Caeli detulissent, mulier ingeniosa praecepit his ut omnia Caelio pollicerentur; sed ut venenum, cum a Licinio traderetur, manifesto comprehendi posset, constitui locum iussit balneas Senias, ut eo mitteret amicos qui delitiscerent, deinde repente, cum venisset Licinius venenumque traderet, prosilirent hominemque comprenderent.«</s> <milestone n="26" unit="chapter"/> 
+                  <s>quae quidem omnia, iudices, perfacilem rationem habent reprendendi.</s> <s>cur enim potissimum balneas publicas constituerat?</s> <s>in quibus non invenio quae latebra togatis hominibus esse posset.</s> <s>nam si essent in vestibulo balnearum, non laterent; sin se in intimum conicere vellent, nec satis commode calceati et vestiti id facere possent et fortasse non reciperentur, nisi forte mulier potens quadrantaria illa permutatione familiaris facta erat balneatori.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="63"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>atque equidem vehementer exspectabam quinam isti viri boni testes huius manifesto deprehensi veneni dicerentur; nulli enim sunt adhuc nominati.</s> <s>sed non dubito quin sint pergraves, qui primum sint talis feminae familiares, deinde eam provinciam susceperint ut in balneas contruderentur, quod illa nisi a viris honestissimis ac plenissimis dignitatis, quam velit sit potens, numquam impetravisset.</s> <s>sed quid ego de dignitate istorum testium loquor?</s> <s>virtutem eorum diligentiamque cognoscite.</s> <s>»in balneis delituerunt.«</s> <s>Testis egregios!</s> <s>»dein temere prosiluerunt.«</s> <s>homines temperantis!</s> <s>sic enim fingitis, cum Licinius venisset, pyxidem teneret in manu, conaretur tradere, nondum tradidisset, tum repente evolasse istos praeclaros testis sine nomine; Licinium autem, cum iam manum ad tradendam pyxidem porrexisset, retraxisse atque ex illo repentino hominum impetu se in fugam coniecisse.</s> <s>O magnam vim veritatis, quae contra hominum ingenia, calliditatem, sollertiam contraque fictas omnium insidias facile se per se ipsa defendat!</s> <milestone n="27" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="64"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>velut  haec tota fabella veteris et plurimarum fabularum poetriae quam est sine argumento, quam nullum invenire exitum potest!</s> <s>quid enim? isti tot viri — nam necesse est fuisse non paucos ut et comprehendi Licinius facile posset et res multorum oculis esset testatior — cur Licinium de manibus amiserunt?</s> <s>qui minus enim Licinius comprehendi potuit cum se retraxit ne pyxidem traderet, quam si tradidisset?</s> <s>erant enim illi positi ut comprehenderent Licinium, ut manifesto Licinius teneretur aut cum retineret venenum aut cum tradidisset.</s> <s>hoc fuit totum consilium mulieris, haec istorum provincia qui rogati sunt; quos quidem tu quam ob rem temere prosiluisse dicas atque ante tempus non reperio.</s> <s>fuerant ad hoc rogati, fuerant ad hanc rem conlocati, ut venenum, ut insidiae, facinus denique ipsum ut manifesto comprenderetur.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="65"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>potueruntne magis tempore prosilire quam cum Licinius venisset, cum in manu teneret veneni pyxidem?</s> <s>quae cum iam erat tradita servis,  evasissent subito ex balneis mulieris amici Liciniumque comprehendissent, imploraret hominum fidem atque a se illam pyxidem traditam pernegaret.</s> <s>quem quo modo illi reprehenderent? vidisse se dicerent?</s> <s>primum ad se vocarent maximi facinoris crimen; deinde id se vidisse dicerent quod quo loco conlocati fuerant non potuissent videre.</s> <s>tempore igitur ipso se ostenderunt, cum Licinius venisset, pyxidem expediret, manum porrigeret, venenum traderet.</s> <s>mimi ergo iam exitus, non fabulae; in quo cum clausula non invenitur, fugit aliquis e manibus, dein scabilla concrepant, aulaeum tollitur.</s> <milestone n="28" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="66"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>quaero enim cur Licinium titubantem, haesitantem, cedentem, fugere conantem mulieraria manus ista de manibus emiserit, cur non comprenderint, cur non ipsius confessione, multorum oculis, facinoris denique voce tanti sceleris crimen expresserint.</s> <s>an timebant ne tot unum, valentes imbecillum, alacres perterritum superare non possent?</s> 
+                  <s>nullum argumentum in re, nulla suspicio in causa, nullus exitus criminis reperietur.</s> <s>itaque haec causa ab argumentis, a coniectura, ab eis signis quibus veritas inlustrari solet ad testis tota traducta est.</s> <s>quos quidem ego, iudices, testis non modo sine ullo timore sed etiam cum aliqua spe delectationis exspecto.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="67"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>praegestit animus iam videre, primum lautos iuvenes mulieris beatae ac nobilis familiaris, deinde fortis viros ab imperatrice in insidiis atque in praesidio balnearum conlocatos.</s> <s>ex quibus requiram quem ad modum latuerint aut ubi, alveusne ille an equus Troianus fuerit qui tot invictos viros muliebre bellum gerentis tulerit ac texerit.</s> <s>illud vero respondere cogam, cur tot viri ac tales hunc et unum et tam imbecillum quem videtis non aut stantem comprehenderint aut fugientem consecuti sint; qui se numquam profecto, si in istum locum processerint, explicabunt.</s> <s>quam volent in conviviis faceti, dicaces, non numquam etiam ad vinum diserti sint, alia fori vis est, alia triclini, alia subselliorum ratio, alia lectorum; non idem iudicum comissatorumque conspectus; lux denique longe alia est solis, alia lychnorum.</s> <s>quam ob rem excutiemus omnis istorum delicias, omnis ineptias, si prodierint.</s> <s>sed me audiant, navent aliam operam, aliam ineant gratiam, in aliis se rebus ostentent, vigeant apud istam mulierem venustate, dominentur sumptibus, haereant, iaceant, deserviant; capiti vero innocentis fortunisque parcant.</s>
+                  <milestone n="29" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="68"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>at sunt servi illi de cognatorum sententia, nobilissimorum et clarissimorum hominum, manu missi.</s> <s>tandem aliquid invenimus quod ista mulier de suorum propinquorum, fortissimorum virorum, sententia atque auctoritate fecisse dicatur.</s> <s>sed scire cupio quid habeat argumenti ista manumissio; in qua aut crimen est Caelio quaesitum aut quaestio sublata aut multarum rerum consciis servis cum causa praemium persolutum.</s> <s>»at propinquis« inquit »placuit.«</s> <s>cur non placeret, cum rem tute ad eos non ab aliis tibi adlatam sed a te ipsa compertam deferre diceres?</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="69"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>hic etiam miramur, si illam commenticiam pyxidem obscenissima sit fabula consecuta?</s> <s>nihil est quod in eius modi mulierem non cadere videatur.</s> <s>audita  et percelebrata sermonibus res est.</s> <s>percipitis animis, iudices, iam dudum quid velim vel potius quid nolim dicere.</s> <s>quod etiam si est factum, certe a Caelio quidem non est factum — quid enim attinebat? — est enim ab aliquo adulescente fortasse non tam insulso quam inverecundo.</s> <s>sin autem est fictum, non illud quidem modestum sed tamen est non infacetum mendacium; quod profecto numquam hominum sermo atque opinio comprobasset, nisi omnia quae cum turpitudine aliqua dicerentur in istam quadrare apte viderentur.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="70"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"><s>dicta est a me causa, iudices, et perorata.</s> <s>iam intellegitis quantum iudicium sustineatis, quanta res sit commissa vobis.</s> <s>de vi quaeritis.</s> <s>quae lex ad imperium, ad maiestatem, ad statum patriae, ad salutem omnium pertinet, quam legem <choice>
+                     <abbr>Q.</abbr>
+                     <expan instant="false">Q<ex instant="false">uintus</ex>
+                     </expan>
+                  </choice> Catulus armata dissensione civium rei publicae paene extremis temporibus tulit, quaeque lex sedata illa flamma consulatus mei fumantis reliquias coniurationis exstinxit, hac nunc lege Caeli adulescentia non ad rei publicae poenas sed ad mulieris libidines et delicias deposcitur.</s> <milestone n="30" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="71"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>atque hoc etiam loco <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arci</ex>
+                     </expan>
+                  </choice>  Camurti et <choice>
+                     <abbr>C.</abbr>
+                     <expan instant="false">G<ex instant="false">ai</ex>
+                     </expan>
+                  </choice> Caeserni damnatio praedicatur.</s> <s>o stultitiam! stultitiamne dicam an impud Caeserni damnatio praedicatur.</s> <s>o stultitiam! stultitiamne dicam an impudentiam singularem?</s> <s>audetisne, cum ab ea muliere veniatis, facere istorum hominum mentionem?</s> <s>audetis excitare tanti flagiti memoriam, non exstinctam illam quidem sed repressam vetustate?</s> <s>quo enim illi crimine peccatoque perierunt?</s> <s>nempe quod eiusdem mulieris dolorem et iniuriam Vettiano nefario sunt stupro persecuti.</s> <s>ergo ut audiretur Vetti nomen in causa, ut illa vetus aeraria fabula referretur, idcirco Camurti et Caeserni est causa renovata?</s> <s>qui quamquam lege de vi certe non tenebantur, eo maleficio tamen erant implicati ut ex nullius legis laqueis eximendi viderentur.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="72"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"><s><abbr>M.</abbr> vero Caelius cur in hoc iudicium vocatur?</s> <s>cui neque proprium quaestionis crimen obicitur nec vero aliquod eius modi quod sit a lege seiunctum, cum vestra severitate coniunctum.</s> <s>cuius prima aetas disciplinae dedita fuit eisque artibus quibus instruimur ad hunc usum forensem, ad capessendam rem publicam, ad honorem, gloriam, dignitatem.</s> <s>eis autem fuit amicitiis maiorum natu quorum imitari industriam continentiamque maxime vellet, eis studiis aequalium ut eundem quem optimi ac nobilissimi petere cursum laudis videretur.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="73"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>cum autem paulum iam roboris accessisset aetati, in Africam profectus est <choice>
+                     <abbr>Q.</abbr>
+                     <expan instant="false">Q<ex instant="false">uinto</ex>
+                     </expan>
+                  </choice> Pompeio pro consule contubernalis, castissimo homini atque omnis offici diligentissimo; in qua provincia cum res erant et possessiones paternae, tum etiam usus quidam provincialis non sine causa a maioribus huic aetati tributus.</s> <s>decessit illinc Pompei iudicio probatissimus, ut ipsius testimonio cognoscetis.</s> <s>voluit vetere instituto et eorum adulescentium exemplo qui post in civitate summi viri et clarissimi cives exstiterunt industriam suam a populo Romano ex aliqua inlustri accusatione cognosci.</s> <milestone n="31" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="74"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>vellem alio potius eum cupiditas gloriae detulisset; sed abiit huius tempus querelae.</s> <s>accusavit 
+                  <choice>
+                     <abbr>C.</abbr>
+                     <expan instant="false">G<ex instant="false">aium</ex>
+                     </expan>
+                  </choice>  Antonium, conlegam meum, cui misero praeclari in rem publicam benefici memoria nihil profuit, nocuit opinio malefici cogitati.</s> <s>postea nemini umquam concessit aequalium plus ut in foro, plus ut in negotiis versaretur causisque amicorum, plus ut valeret inter suos gratia.</s> <s>quae nisi vigilantes homines, nisi sobrii, nisi industrii consequi non possunt, omnia labore et diligentia est consecutus.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="75"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>in hoc flexu quasi aetatis — nihil enim occultabo fretus humanitate ac sapientia vestra — fama adulescentis paululum haesit ad metas notitia nova eius mulieris et infelici vicinitate et insolentia voluptatum, quae, cum inclusae diutius et prima aetate compressae et constrictae fuerunt, subito se non numquam profundunt atque eiciunt universae.</s> <s>qua ex vita vel dicam quo ex sermone — nequaquam enim tantum erat quantum homines loquebantur — verum ex eo quicquid erat emersit totumque se eiecit atque extulit, tantumque abest ab illius familiaritatis infamia ut eiusdem nunc ab sese inimicitias odiumque propulset.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="76"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>atque ut iste interpositus sermo deliciarum desidiaeque moreretur — fecit me invito me hercule et multum repugnante me, sed tamen fecit — nomen amici mei de ambitu detulit; quem absolutum insequitur, revocat; nemini nostrum obtemperat, est violentior quam vellem.</s> <s>sed ego non loquor de sapientia, quae non cadit in hanc aetatem; de impetu animi loquor, de cupiditate vincendi, de ardore mentis ad gloriam; quae studia in his iam aetatibus nostris contractiora esse debent, in adulescentia vero tamquam in herbis significant quae virtutis maturitas et quantae fruges industriae sint futurae.</s> <s>etenim semper magno ingenio adulescentes refrenandi potius a gloria quam incitandi fuerunt; amputanda plura sunt illi aetati, si quidem efflorescit ingeni laudibus, quam inserenda.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="77"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <reg instant="false">qua</reg> re, si cui nimium effervisse videtur huius vel in suscipiendis vel in gerendis inimicitiis vis, ferocitas, pertinacia, si quem etiam minimorum horum aliquid offendit, si purpurae genus, si amicorum catervae, si splendor, si nitor, iam ista deferverint, iam aetas omnia, iam res, iam dies mitigarit. <milestone n="32" unit="chapter"/> 
+               </p> 
+               <p part="N"> 
+                  <reg instant="false">conservate</reg> igitur rei publicae, iudices, civem bonarum artium, bonarum partium, bonorum virorum. <reg instant="false">promitto</reg> hoc vobis et rei publicae spondeo, si modo nos ipsi rei publicae satis fecimus, numquam hunc a nostris rationibus seiunctum fore. <reg instant="false">quod</reg> cum fretus nostra familiaritate promitto, tum quod durissimis se ipse legibus iam obligavit. </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="78"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <reg instant="false">non</reg> enim potest qui hominem consularem, cum ab eo rem publicam violatam esse diceret, in iudicium vocarit ipse esse in re publica civis turbulentus; non potest qui ambitu ne absolutum quidem patiatur esse absolutum ipse impune umquam esse largitor. <reg instant="false">habet</reg> a <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arco</ex>
+                     </expan>
+                  </choice> Caelio res publica, iudices, duas accusationes vel obsides periculi vel pignora voluntatis. <reg instant="false">qua</reg> re oro obtestorque vos, iudices, ut qua in civitate paucis his diebus Sex. Clodius absolutus est, quem vos per biennium aut ministrum seditionis aut ducem vidistis, hominem sine re, sine fide, sine spe, sine sede, sine fortunis, ore, lingua, manu, vita omni inquinatum, qui aedis sacras, qui censum populi Romani, qui memoriam publicam suis manibus incendit, qui Catuli monumentum adflixit, meam domum diruit, mei fratris incendit, qui in Palatio atque in urbis oculis servitia ad caedem et ad inflammandam urbem incitavit: in ea civitate ne patiamini illum absolutum muliebri gratia, <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arcum</ex>
+                     </expan>
+                  </choice> Caelium libidini muliebri condonatum, ne eadem mulier cum suo coniuge et fratre et turpissimum latronem eripuisse et honestissimum adulescentem oppressisse videatur. </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="79"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <reg instant="false">quod</reg> cum huius vobis adulescentiam proposueritis, constituitote ante oculos etiam huius miseri senectutem qui hoc unico filio nititur, in huius spe requiescit, huius unius casum pertimescit; quem vos supplicem vestrae misericordiae, servum potestatis, abiectum non tam ad pedes quam ad mores sensusque vestros, vel recordatione parentum vestrorum vel liberorum iucunditate sustentate, ut in alterius dolore vel pietati vel indulgentiae vestrae serviatis. <reg instant="false">nolite</reg>, iudices, aut hunc iam natura ipsa occidentem velle maturius exstingui volnere vestro quam suo fato, aut hunc nunc primum florescentem firmata iam stirpe virtutis tamquam turbine aliquo aut subita tempestate pervertere. </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="80"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <reg instant="false">conservate</reg> parenti filium, parentem filio, ne aut senectutem iam prope desperatam contempsisse aut adulescentiam plenam spei maximae non modo non aluisse vos verum etiam perculisse atque adflixisse videamini. <reg instant="false">quem</reg> si nobis, si suis, si rei publicae conservatis, addictum, deditum, obstrictum vobis ac liberis vestris habebitis omniumque huius nervorum ac laborum vos potissimum, iudices, fructus uberes diuturnosque capietis. </p>
+            </div>
+         </div>
+      </body>
+   </text>
+
+</TEI>

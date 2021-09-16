@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader xml:lang="hrv">
+      <fileDesc>
+         <titleStmt>
+	           <title>Ciceronov govor za Marka Celija</title>
+	           <title>Pro Caelio</title>
+	           <title type="sub">Machine readable text</title>
+	           <author n="Cic.">M. Tullius Cicero</author>
+	           <editor role="editor" n="OCT">Albert Clark</editor>
+            <editor role="editor" n="NJ">Neven Jovanović</editor>
+            <sponsor>Sveučilište u Zagrebu, Filozofski fakultet</sponsor>
+            <sponsor>Perseus Project, Tufts University</sponsor>
+            <principal>Gregory Crane</principal>
+            <respStmt>
+               <resp>Prepared under the supervision of</resp>
+               <name full="yes" instant="false">Bridget Almas</name>
+               <name full="yes" instant="false">Lisa Cerrato</name>
+               <name full="yes" instant="false">William Merrill</name>
+               <name full="yes" instant="false">David Mimno</name>
+               <name full="yes" instant="false">Rashmi Singhal</name>
+               <name full="yes" instant="false">David Smith</name>
+            </respStmt>
+            <funder n="org:NEH">National Endowment For The Humanities (NEH)</funder> 
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Trustees of Tufts University</publisher>
+            <pubPlace>Medford, MA</pubPlace>
+            <authority>Perseus Project</authority>
+            <date type="release" instant="false">1997-10-28</date>
+         </publicationStmt> 
+         <sourceDesc default="false">
+	           <biblStruct default="false" status="draft">
+	              <monogr>
+	                 <author>M. Tullius Cicero</author>
+	                 <title>M. Tulli Ciceronis Orationes:
+Recognovit brevique adnotatione critica instruxit
+Albertus Curtis Clark
+Collegii Reginae Socius</title>
+	                 <editor role="editor">Albert Curtis Clark</editor>
+	                 <imprint>
+	                    <pubPlace>Oxonii</pubPlace>
+	                    <publisher>e Typographeo Clarendoniano</publisher>
+	                    <date instant="false">1908</date>
+	                 </imprint>
+	                 <biblScope unit="page">319-357</biblScope>
+	              </monogr>
+	              <series>	    
+                  <title>Scriptorum Classicorum Bibliotheca Oxoniensis</title>
+	              </series>
+	              <ref target="https://archive.org/details/orationesrecogno01ciceuoft">Internet Archive</ref>
+	           </biblStruct>
+         </sourceDesc>
+      </fileDesc>
+    
+      <encodingDesc>
+         <refsDecl n="CTS" default="false">
+            <cRefPattern matchPattern="(\w+)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                <p part="N">This pointer pattern extracts section</p>
+            </cRefPattern>
+        </refsDecl>
+         <refsDecl default="false">
+	           <refState unit="section"/>
+         </refsDecl>
+      </encodingDesc>    
+      <profileDesc>
+         <langUsage default="false">
+	           <language ident="lat">Latin</language>
+            <language ident="grc">Greek</language>
+            <language ident="hrv">Croatian</language>
+         </langUsage>
+      </profileDesc>
+    
+     <revisionDesc status="draft">
+        <change when="2021-09-11" who="Neven Jovanović" status="draft">Replace Latin text with Croatian translation by Neven Jovanović</change>
+         <change when="2014-11-06" who="Thibault Clerice" status="draft">Moving to Epidoc with new URN</change>
+         <change when="2015-10-29" who="Thibault Clerice" status="draft">CTS according to Capitains Guidelines + Epidoc</change>
+         <change when="2014-08-01" who="Bridget Almas" status="draft">split section milestones to divs as canonical citation scheme (as decided per GRC). also converted greek in foreign tags  unicode.</change>
+         <change when="2014-07-01" who="Stella Dee" status="draft">split composite text and converted to unicode</change>
+         <change when="2013-09-13" who="balmas01" status="draft">reverting texts back to pre_cts_reorg tagged version</change>
+         <change when="2011-07-19" who="gcrane" status="draft">removed the earlier persName/placeName tags</change>
+         <change when="2011-01-15" who="gcrane" status="draft">base SDL file</change>
+         <change when="2009-10-09" who="rsingh04" status="draft">more reorganizing of texts module by collection</change>
+         <change when="2006-11-03" who="gcrane" status="draft">typo</change>
+         <change when="2006-08-21" who="gcrane" status="draft">small fixes</change>
+         <change when="2006-08-17" who="gcrane" status="draft">typo fixed</change>
+         <change when="2006-04-02" who="gcrane" status="draft">mainly fixes to the words lower cased at the start of sentences: found that we had always had <name full="yes" instant="false">Cum</name> rather than <reg instant="false">cum</reg>. This has been fixed in oct.cic[123] oct.cic[456] are having the app crits added and will need to be updated when those files come back</change>
+         <change when="2005-12-29" who="gcrane" status="draft">this now contains textual notes</change>
+         <change when="2005-11-17" who="gcrane" status="draft">began vestigial app crit</change>
+         <change when="2005-08-01" who="packel" status="draft">removed stray item tags</change>
+         <change when="2005-07-25" who="packel" status="draft">Converted to XML</change>
+         <change when="2005-04-08" who="mimno" status="draft">added default chunks</change>
+         <change when="2004-05-24" who="amahoney" status="draft">experiment with marking abbreviations of praenomina</change>
+         <change when="2003-07-01" who="yorkc" status="draft">Updated texts to TEI P4 and Perseus P4 extensions; minor cleanup (esp. character encodings and typos.)</change>
+         <change when="2002-12-02" who="amahoney" status="draft">correct spelling of Quirites, improperly 'regularized'</change>
+         <change when="2002-01-18" who="amahoney" status="draft">put spaces around mdash because umorphck is confused if there are none</change>
+         <change when="2002-01-18" who="amahoney" status="draft">missed a few 'v' in the small caps</change>
+         <change when="2001-12-31" who="amahoney" status="draft">finish fixing the small caps, partially converted to lower case</change>
+         <change when="2000-03-06" who="amahoney" status="draft">add headers for groups of speeches, so they show up in the toc:  Catilines, Verrines, Philippics, and Agrarian Law</change>
+         <change when="2000-03-04" who="dasmith" status="draft">Added separate funder entity to TEI header.</change>
+         <change when="1999-10-14" who="dasmith" status="draft">Added explanatory subtitles to titleStmt</change>
+         <change when="1999-08-12" who="dasmith" status="draft">Fixed refsDecl</change>
+         <change when="1999-08-04" who="textgod" status="draft">Random changes over a period of months.</change>
+         <change when="1997-08-18" who="textgod" status="draft">???</change>
+         <change when="1997-05-12" who="cjsu" status="draft">Finalized tagging. Passes validation.</change>
+         <change when="1997-05-12" who="textgod" status="draft">Added the rest of volume 1</change>
+         <change when="1997-03-26" who="textgod" status="draft">Added to repository. Passes TEI parse.</change>
+     </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="edition"
+              xml:lang="lat"
+              n="urn:cts:latinLit:phi0474.phi024.perseus-lat2"
+              part="N"
+              org="uniform"
+              sample="complete">
+            <head>PRO M. CAELIO ORATIO</head> 
+            
+            
+            <div type="textpart"
+                 subtype="section"
+                 n="1"
+                 part="N"
+                 org="uniform"
+                 sample="complete">
+               <milestone n="1" unit="chapter"/> 
+               <p part="N"> 
+                  <s>Ako bi se tko, gospodo suci, slučajno zatekao sada i ovdje ne poznajući naše zakone, sudove, običaje, ostao bi, mislim, preneražen stravičnošću ovoga slučaja; za blagdana i festivala, kad su obustavljeni svi pravni poslovi, samo se ovo naše sudsko ročište održavati mora. Taj bi netko zato sa sigurnošću zaključio: vodi se postupak protiv okrivljenika za zločin čija bi veličina, izostane li reakcija, mogla ugroziti opstanak čitave države.</s>  <s>Pa kad bi još čuo da postoji zakon koji nalaže da se o podstrekačima pobune i nasilja – o građanima koji su senat naoružani opkolili, dužnosnike fizički napali, na državnu zajednicu nasrnuli – da se o njima sudska istraga provodi u bilo koji dan, netko bi zakon zdušno odobrio, samo bi za optužbu pitao. A kad bi čuo da se ne pretresa nikakvo masovno ubojstvo, nikakvo rušenje vlasti, nikakav čin nasilja, već da jedan mladić iznimno inteligentan, aktivan, popularan, biva optužen od sina osobe koju sam izvodi pred sud, kao što ju je i prije izvodio, a pritom biva napadan sredstvima bludničkim – tada taj netko sinovsku lojalnost osudio ne bi; ženske strasti treba suzbijati, zaključio bi; a vi ste, shvatio bi, mučenici, kojima odmor nije dozvoljen ni kad se svi odmaraju.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="2"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Kako god bilo, poželite li ovaj slučaj razmotriti pomno i procijeniti realno, naći ćete, gospodo suci, da se postupak ovakve vrste ne bi usudio pokretati nitko tko može samostalno odlučivati; a kad ga je već pokrenuo, ne bi se usudio na najmanju nadu u uspjeh da nije podupiran nečijom nesnosnom požudom i nečijom pakleno ljutom mržnjom.</s> <s>Ali gospodinu Atratinu, pristojnom i finom mladom čovjeku, meni bliskom, ja mogu oprostiti; opravdavaju ga ili lojalnost, ili nužda, ili dob.</s> <s>Ako je tužbu sam odlučio pokrenuti, bilo je iz lojalnosti; ako su mu naredili, bilo je iz nužde; ako je imao kakvih ambicija, bilo je zbog djetinjastosti.</s> <s>Drugima, međutim, ništa ne treba opraštati; dapače, valja po njima udariti svim silama.</s><milestone n="2" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="3"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>A po meni, gospodo suci, sljedeći se pristup obrani čini u najboljem skladu s Celijevom mladošću: na ono što su tužitelji rekli kako bi čovjeka ocrnili te mu dostojanstvo oduzeli i oteli, na to ću prvo odgovoriti.</s> <s>Prigovara se zbog oca, po više osnova: ili je sam taj gospodin nedovoljno ugledan, ili se prema njemu sin, navodno, odnosio s nedovoljnim poštovanjem.</s> <s>Na prigovor o ugledu gospodin će Celije znancima i starijima, i bez mojeg govora, i šutke, posve lako sam odgovoriti; a kome zbog svoje starosti, budući da već dugo ne dolazi na trg i među nas, nije dostatno poznat, ti neka pamte: kakva god u rimskoga ekvita može biti ugleda (a može ga biti, naravno, u najvećoj mogućoj mjeri), on je oduvijek iznimno krasio gospodina Celija, te ga i danas krasi; štuju ga ne samo njegovi, nego svi koji su se iz ma kojeg razloga mogli s njime upoznati.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="4"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>A to da je netko sin rimskoga ekvita ne bi se smjelo kao optužba iznositi niti pred ovakvom porotom niti preda mnom kao braniteljem.</s>  <s>U vezi s vašom izjavom o poštovanju, to je, slažem se, stvar procjene, ali konačan sud mora svakako donijeti sam roditelj.</s> <s>Koji je naš stav, čut ćete od zakletih svjedoka; što osjećaju roditelji, jasno pokazuju majčine suze i neizreciva tuga, očeva potištenost i ovaj jad koji promatrate, jad i žalost.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="5"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N">
+                     <s>U vezi s tvrdnjom da je mladić izazvao nezadovoljstvo svojih sugrađana, nikad ni u čijoj prisutnosti nisu Pretutijani iskazivali veće počasti, gospodo suci, nego u odsutnosti gospodina Marka Celija; ne samo da su ga odsutnoga uključili u svoje najuglednije tijelo, nego su mu i bez njegova traženja dodijelili ono što su uskratili mnogima koji jesu tražili.</s>  <s>Isti su oni sada na ovo suđenje odaslali najistaknutiju gospodu, i članove našeg tijela i rimske ekvite, s predstavničkim ovlastima i s važnom i elokventnom pohvalom.</s> <s>Time sam, smatram, za svoju obranu postavio temelje, i to najčvršće, budući da se oslanjaju na potvrdu bližnjih ovdje prisutnoga.</s> <s>Za mladost toga čovjeka ne bi se nipošto moglo adekvatno jamčiti kad bi protiv njega nešto imali bilo roditelj, takav istaknut gospodin, bilo municipij tako ugledan i tako relevantan.</s>
+                     <milestone n="3" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="6"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"><s>Pa i osobno sam, da spomenem i sebe, s takva jednog izvora krenuo prema popularnosti u narodu, i ovi su moji javni napori i životna načela naišli na nešto šire odobravanje upravo osnaženi jamčenjem i potvrdom mojih bližnjih.</s></p> 
+               <p part="N"> 
+                  <s>Što se tiče predbacivanja na račun moralnosti, onih koja su svi tužitelji višekratno iznosili ne potkrepljujući ih konkretnim optužbama već insinuacijama i uvredama, ta predbacivanja gospodina Celija nipošto neće pogoditi u tolikoj mjeri da požali što se nije rodio ružan.</s> <s>Takve se zlobne priče, znamo, šire o svima koji su u mladosti bili pristojne i skladne vanjštine.</s> <s>Ali jedno je tračati, drugo tužiti na sudu.</s> <s>Tužiteljska zadaća traži optužbu, definirano djelo, imenovanu osobu, jasno obrazloženje, potvrdu svjedoka; za vrijeđanje ne treba ništa osim zlobe; ako je vrijeđanje bezobraznije, zovemo ga prostotom, ako je kultiviranije, zovemo ga duhovitošću.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="7"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Za taj sam se, dakle, dio optužbe začudio, i teško mi je palo, što je dodijeljen upravo gospodinu Atratinu.</s> <s>To nije bilo u redu; njegova dob nije tome bila prikladna i, kao što ste mogli zapaziti, pristojnost toga odličnog mladog čovjeka teško se nosila s takvim govorničkim pristupom.</s> <s>Bilo bi mi drago da je netko od vas veterana preuzeo taj zadatak zlobnog vrijeđanja; nešto bismo slobodnije i jače i više u vlastitom stilu pobili tu razuzdanost zločestoće.</s> <s>S vama, gospodine Atratine, bit ću blaži, kako zato što vaša pristojnost postavlja granice mojim riječima, tako i zato što moram poštivati lojalnost koja me veže s vama i vašim roditeljem.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="8"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"><s>Htio bih vas ipak upozoriti na sljedeće: prvo, kakvi jeste, takvim neka vas svi i smatraju, pa se onoliko koliko ste udaljeni od sramotna ponašanja ogradite i od slobodna izražavanja; potom, drugome nemojte govoriti ono za što biste, da se vama neosnovano predbacuje, morali pocrvenjeti.</s> <s>Pa kome od nas nije otvoren takav put, tko ne bi mogao ovakvu dob i takvu skladnost zlobno vrijeđati, svakako bez ikakva osnova za sumnju, ali ne bez polazišta za izmišljanje?</s>  <s>No, krivnja za preuzimanje takve uloge na onima je koji su htjeli da nastupite pred sudom; na čast je vašoj pristojnosti što smo vidjeli da o svemu tome govorite nevoljko, a na čast je talentu što ste govorili elegantno i dotjerano.</s> <milestone n="4" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="9"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Protiv čitavog toga vašeg govora, međutim, obrana je kratka.</s> <s>U mjeri u kojoj je mladost gospodina Celija mogla dati povoda za vaše insinuacije, ta je mladost bila zaštićena prvo čednošću njega samog, a potom i očevim angažmanom i odgojem.</s>  <s>A kad je otac gospodinu Celiju dao mušku togu – na ovom mjestu ni riječi o meni; to neka vrijedi onoliko koliko smatrate da vrijedi; reći ću tek sljedeće: otac ga je smjesta doveo k meni – nitko ovdje prisutnog gospodina Celija, u tom tadašnjem procvatu mladenaštva, nije vidio bez oca, ili bez mene, ili izvan čestita doma gospodina Krasa, gdje se obrazovao u najčasnijim umijećima.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="10"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Bliskost s Katilinom predbačena je gospodinu Celiju.</s> <s>Što se toga tiče, od osnova za sumnju nužno je miljama udaljen.</s> <s>Naime, na pragu Celijeve mladosti, kako znate, Katilina se protiv mene natjecao za konzulsku čast.</s> <s>Da se Katilini približio, ili da se od mene ikad udaljio – mada su mnogi valjani mladići bili na strani onoga opasnog i nepoštenog čovjeka – tada bi se moglo smatrati da je gospodin Celije bio Katilini odviše blizak.</s> <s>Kasnije, međutim, znamo i vidjeli smo da je Celije čak bio među njegovim prijateljima.</s> <s>Tko bi to porekao?</s>  <s>Ali ja na ovom mjestu branim ono životno doba koje je samo po sebi voljom nejako, a tuđom požudom opsjedano.</s>  <s>Zaista, bio je neprestano uza me za moje preture; Katilinu nije ni upoznao; taj je tada bio u Africi kao propretor.</s>  <s>Prošla je godina dana, Katilina je morao odgovarati zbog zloupotrebe dužnosti.</s> <s>Celije je i dalje bio uza me, Katilini se nije približio čak ni kao pravni savjetnik, ni u jednom času.</s>  <s>Potom je došla godina kad sam se kandidirao za konzula; Katilina se kandidirao sa mnom.</s> <s>Nikada njemu nije prišao, od mene nikad nije odstupio.</s><milestone n="5" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="11"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N">
+                  <s>Pošto je, dakle, toliko godina proveo u javnom životu bez najmanjeg osnova za sumnju, bez sramote, stao je na Katilininu stranu kad se ovaj drugi put kandidirao.</s> <s>Dobro, što mislite, dokle je valjalo bdjeti nad tom mladošću?</s>  <s>U naše smo vrijeme imali jednu jedinu godinu dana da ruku sakrivamo togom, i da u tunici treniramo gimnastiku i atletiku, i isto toliko (ako bismo odmah počeli služiti vojni rok) za logorsku i borbenu obuku.</s> <s>A u takvoj dobi, ako se netko nije sam branio svojom moralnošću i čednošću, svojim kućnim odgojem kao i nekom prirodnom valjanošću, ma koliko ga njegovi bližnji čuvali, ipak nije mogao izbjeći onaj pravi zao glas.</s> <s>Nasuprot tome, tko je sam početak mladosti očuvao neokrnjenim i neokaljanim, o njegovoj reputaciji i čistoći, pošto je već očvrsnuo i postao muškarac među muškarcima, nitko više ne bi širio glasine.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="12"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali stao je na stranu Katiline, pošto je već nekoliko godina proveo u javnom životu, naš gospodin Celije.</s> <s>Stali su i mnogi iz svakog staleža i svake životne dobi.</s> <s>Katilina je bio, naime, čovjek (kao što ćete se, držim, sjetiti) s bezbroj crta najvećih vrlina – ne jasno izraženih, ali nagoviještenih.</s> <s>Bio je povezan s brojnim opasnim ljudima, no hinio je da je odan najboljima.</s> <s>Nudio je obilje mamaca za požudu, a i neki impuls energije i djelovanja.</s> <s>Požar izopačenih požuda gorio je u njemu, a imao je i živ interes za vojno umijeće.</s> <s>Po mojoj procjeni, takvo čudovište nikad nije na svijetu postojalo, takva slitina suprotstavljenih, proturječnih, međusobno poništavajućih, a urođenih težnji i nagona.</s><milestone n="6" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="13"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Tko je u jedno doba bio uglednijim ljudima draži od njega, tko besramnijima bliži? Tko je nekoć bio građanin pozitivnije orijentacije, tko gnjusniji dušmanin ovoj državi? Tko je u užicima bio razvratniji, tko u naporima izdržljiviji? Tko u otimačini nezajažljiviji, tko u donacijama izdašniji?</s> <s>Upravo su nevjerojatna bila, gospodo, svojstva u tome čovjeku: organizirano povezivanje mnogih, štićenje odanošću, dijeljenje svojine sa svima, potpomaganje svojih novcem, utjecajem, tjelesnim naporom, pa i, kad je bilo potrebno, zlodjelom i riskiranjem; preoblikovanje vlastite naravi i prilagođavanje okolnostima, povijanje i skretanje sad ovamo, sad onamo; s puritancima disciplinirano ponašanje, s liberalnima zaigrano, sa starcima dostojanstveno, s omladinom šarmantno, s radikalima neustrašivo, s hedonistima razulareno.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="14"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Zahvaljujući svojoj mnogostranoj i fleksibilnoj naravi taj je čovjek uspio ne samo okupiti sve sumnjive i opasne osobe sa svih strana svijeta, nego je i mnogu vrlu i valjanu gospodu opčinio svojevrsnim sjajem hinjene vrline.</s> <s>Nikad on ne bi uspio organizirati tako razoran pokušaj rušenja ove vlasti da se ekstremizam njegovih bezbrojnih poroka nije oslanjao na neke temelje pristupačnosti i samokontrole.</s>  <s>Iz tih razloga ovaj napad, gospodo suci, valja odlučno odbaciti; optužba za bliskost s Katilinom nije održiva.</s> <s>Ona, naime, može pogoditi mnoge, pa i poneke od najboljih među nama.</s> <s>I mene je, upravo mene, gospodo, taj čovjek u jednom času gotovo prevario, kad mi se valjanim građaninom prikazao i pristalicom najviših ideala i pouzdanim i vjernim saveznikom; sam sam se u njegove zločine prije uvjerio očima nego očekivanjima, prije sam ih imao u rukama nego na umu.</s> <s>Među nepreglednom masom saveznika takve individue ako je bio i gospodin Celije, treba mu prije biti žao što je pogriješio – kao što se i ja često kajem zbog greške u vezi s tim čovjekom – nego što treba strahovati od optužbe za savezništvo s Katilinom.</s> <milestone n="7" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="15"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Tako je s kleveta o nemoralu vaš govor skliznuo u poticanje zazora zbog urote.</s>  <s>Ustvrdili ste, naime, pa i to tek s oklijevanjem i neodređenošću, da je gospodin Celije bio sudionik u uroti – zbog bliskosti s Katilinom; pritom ne samo da optužba nije stajala nego je i govor elokventnog mladića bio jedva suvisao.</s> <s>Ta gdje u Celiju ima radikalnog bjesnila, koja je to rana otvorena u njegovu karakteru i naravi, ili u imetku i situaciji?  Napokon, gdje se u cijeloj toj aferi čulo Celijevo ime?</s>  <s>Previše govorim o nimalo dvojbenoj stvari; ipak, reći ću još ovo.</s> <s>U slučaju da je imao veze s urotom – štoviše, u ma kojem slučaju osim da nije bio najveći protivnik toga zločinstva – nikad se ne bi usudio vrline svoje mladosti isticati pokretanjem tužbe zbog sudjelovanja u uroti.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="16"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Čini mi se posve prihvatljivim da i o predizbornoj korupciji i o onim optužbama za partnerstvo u organiziranom prikupljanju mita, kad sam već na ovoj temi, odgovorim slično.</s>  <s>Nikad ne bi gospodin Celije bio toliko lud da, ukoliko se sam okaljao tim beskrajem korupcije, drugoga tuži za korupciju, i ne bi poticao sumnju da je drugi umiješan u djelo kakvo bi sam kod sebe želio zauvijek zataškati, i ne bi, da je sam strepio od progona zbog korupcije, drugoga ponovo izvodio na sud pod optužbom za korupciju.</s> <s>Mada u tom pogledu ne postupa mudro, i mada ja osobno to ne odobravam, sve ukazuje da su njegovi motivi ipak više u proganjanju tuđe nevinosti negoli u strahovanju za vlastitu sigurnost.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="17"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>A na predbacivanja o prezaduženosti, na kritike o rastrošnosti, na zahtjev za uvidom u poslovne knjige, odgovorit ću kratko – pazite kako.</s> <s>Poslovne knjige onaj tko je pod očevim skrbništvom ne mora voditi.</s> <s>Kredit jedan jedini nikad u životu reprogramirao nije.</s> <s>Rastrošnost mu je predbačena po jednoj osnovi, zbog najamnine za stan; trideset tisuća sestercija, rekli ste, iznos je koji plaća za najam.</s> <s>Sad mi je sve jasno – mora da gospodin Klodije prodaje svoju nekretninu, onu gdje u jednom od apartmana Celije stanuje za, čini mi se, deset tisuća.</s> <s>Pa ste vi, izlazeći čovjeku u susret, prilagodili svoju laž Klodijevu oglasu.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="18"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Predbacili ste da se odselio od oca.</s> <s>Tako što u toj dobi ne zaslužuje kritiku.</s> <s>Gospodin Celije, pošto je u slučaju od državnog značaja ostvario meni nažalost nemilu, ali sebi slavnu pobjedu, i kad se već po dobi mogao natjecati za javnu službu, odselio se ne samo uz očevu dozvolu već i po njegovu nagovoru; a budući da je očev dom udaljen od Foruma, kako bi lakše mogao posjećivati naše kuće i sam primati svoje klijente, unajmio je, po povoljnoj cijeni, na Palatinu stan.</s>  
+                   <milestone n="8" unit="chapter"/> 
+                  <s>Na ovom mjestu mogu reći ono što je uvaženi gospodin Kras, izražavajući žaljenje u vezi s dolaskom kralja Ptolemeja, rekao nedugo prije: »O da nije u Pelijinoj šumi...« – a ja bih mogao i nastaviti tu pjesmu: »jer nikad nam zabludjela kraljica ovu muku zadala ne bi, Medeja, s bolom u duši, ranjena divljom strašću.«</s> <s>Tako ćete, naime, gospodo suci, ustanoviti, kad dođem do te točke izlaganja, da su ova Medeja s Palatina i ova selidba našem mladom čovjeku postali uzrok svih zala, ili točnije: ogovaranja.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="19"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Iz tog se razloga ne plašim onoga što sam iz govora tužitelja shvatio da se priprema i izmišlja, gospodo suci, jer sam siguran u vašu razboritost.</s> <s>Znam, govorili su da će kao svjedok nastupiti senator koji će izjaviti da je pri izborima za pontifeksa bio pretučen od gospodina Celija.</s> <s>Svjedoka ću pitati, ako stupi pred sud, prvo: zašto odmah tada nije nešto poduzeo? potom, pod uvjetom da mu je draže bilo žaliti se zbog toga nego pokretati sudski postupak, zašto mu je draže bilo da ga izvedete vi nego da sam istupi, zašto mu je draže bilo žaliti se tako kasno, a ne neposredno nakon djela?</s> <s>Ako mi na to odgovori precizno i dosjetljivo, tada ću, napokon, postaviti pitanje iz kojeg izvora taj gospodin senator izvire.</s>  <s>Jer, ako je izbio i rodio se iz samog sebe, možda ću se, osjetljiv kakav jesam, uznemiriti; ali ako je on potočić koji je kanalizirala i napunila sama glavna struja vaše optužbe, radovat ću se – tolikim, naime, utjecajem i tolikim sredstvima raspolaže vaša optužba, a našao se jedan jedini senator koji vam je poželio učiniti uslugu.</s></p> 
+               <p part="N"> 
+                  <s>(O svjedoku Fufiju.)</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="20"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali ni od one druge vrste svjedoka-noćnih ptica ne strepim.</s> <s>Rečeno je, naime, da će se naći osobe koje će reći da su im supruge, kad su se vraćale s gozbe, bile zlostavljane od gospodina Celija.</s> <s>Poštovanja vrijedni bit će ljudi koji će se usuditi pod prisegom to izjaviti – time će morati priznati da nikad, čak ni privatno, izvansudskom nagodbom, nisu pokušali za takvo nedjelo zatražiti zadovoljštinu.</s> 
+                  <s>Ali ovaj tip napada općenito, gospodo suci, već znate da možete očekivati i, kad dođe, morat ćete ga odbaciti.</s> <s>Jer, gospodina Celija ne tuže isti oni koji ga i napadaju; strijele, koje se na njega odapinju javno, pripremaju se potajno.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="21"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>To ne govorim da bih pobudio neprijateljstvo prema onima kojima takvi postupci, naprotiv, moraju služiti na čast.</s>  <s>Vrše svoju dužnost, brane svoje ljude, postupaju kako se očekuje od valjane gospode: uvreda boli, ljutnja goni, napad izaziva protunapad.</s> <s>Ali na vašoj je mudrosti ipak, gospodo suci, ne smatrati, ako valjana gospoda imaju opravdan razlog da napadnu na Celija, da zato i vi imate opravdan razlog tuđoj boli dati prednost pred vlastitom čašću i poštenjem.</s> <s>Pa vidite koliko je na forumu mnoštvo, kakvih ima vrsta ljudi, interesa, šarenila.</s> <s>Iz te gomile, što mislite – koliko će ih se naći koji će se moćnima, utjecajnima, elokventnima, čim uvide da imaju nekih potreba, dragovoljno staviti na raspolaganje, ponuditi pomoć, obećati svjedočenje?</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="22"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ako osobe toga soja kojim slučajem ulete u ovo suđenje, izvolite neutralizirati njihove apetite, gospodo suci, svojom mudrošću, kako biste u isto vrijeme zaštitili i opstanak ovog čovjeka, i svoju svečanu obavezu, i položaj svih građana pred pogibeljnom moći pojedinaca.</s> <s>I ja ću vam osobno pomoći da se odmaknete od svjedoka i neću dopustiti da istina ovoga suđenja, koja se ni na koji način ne može izmijeniti, bude određena voljom svjedoka na koju je vrlo lako utjecati, kojom se može bez muke upravljati i manipulirati.</s> <s>Dokaze ćemo dati, podacima jasnijim od sunčeva svjetla pobijat ćemo optužbe; činjenica će udariti na činjenicu, motiv na motiv, karakter na karakter.</s><milestone n="10" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="23"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Onda, drago mi je da je gospodin Kras svojim govorom dostojanstveno i elegantno objasnio onaj dio tužbe o neredima u Neapolu, o napadu na Aleksandrijce u Puteolima, o imovini gospođe Pale.</s> <s>Slobodno je mogao objasniti i o Dionu.</s> <s>No, o toj temi što da vam novo kažem? Recimo: onaj koji je počinitelj zločina, taj se ili ne boji pravde ili, dapače, djelo sam priznaje; briga ga, on je kralj; a onaj tko je naveden kao pomagač i saučesnik, gospodin Publije Asicije, taj je sudskim putem bio oslobođen.</s> <s>Dakle, radi se o optužbi koju onaj tko je počinio ne poriče, onaj tko je porekao oslobođen je, a trebao bi je se plašiti ovdje nazočni, miljama udaljen od osnova za sumnju, ne samo za djelo, već i za sudjelovanje?</s>  <s>Pa ako je gospodinu Asiciju više koristila njegova obrana nego što mu je naštetila tendencioznost optužbe, hoće li gospodinu Celiju smetati vaše vrijeđanje, kad na njega ne samo da nije pala sjenka osnovane sumnje za ovo djelo, već ga ni glasine nisu dotakle?</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="24"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali gospodin je Asicije oslobođen zahvaljujući dogovoru između optužbe i obrane!</s>  <s>Na tu je točku vrlo lako odgovoriti, osobito meni, branitelju u tom slučaju.</s>  <s>No, gospodin Celije smatra Asicijev slučaj posve čistim; kako god bilo, drži da je nepovezan s njegovim vlastitim.</s>  <s>I ne samo gospodin Celije, nego i kulturni i iznimno obrazovani mladi ljudi, ponos valjanih znanosti i najboljih umijeća, gospoda Tit i Gaj Koponije, koje je najviše od svih ožalostila Dionova smrt, koji su prema Dionu imali obaveze koje proizlaze iz težnje za znanjem i kulturom, kao i iz odnosa gosta i domaćina.</s> <s>Kod gospodina Tita je, kao što ste čuli, Dion stanovao, bio mu je poznat još iz Aleksandrije.</s> <s>Što Tit, ili njegov osobitim ugledom obdaren brat, misle o gospodinu Celiju čuti ćete od njih samih, ako ih optužba pozove za svjedoke.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="25"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Sve to neka se, dakle, stavi na stranu, kako bismo već jednom došli do onoga na čemu se slučaj temelji.</s>  <s>Opazio sam, naime, gospodo suci, da ste mome bliskom kolegi, gospodinu Hereniju, poklonili najveću svoju pozornost.</s>  <s>Pritom, mada ste većim dijelom bili opčinjeni njegovim talentom i specifičnom ljepotom izražavanja, ipak bih s vremena na vrijeme osjetio strah da će njegov govor, istančano usmjeren ka gradnji dojma o krivnji, prodrijeti u vaše umove postupno i diskretno.</s>  <s>Jer mnogo je toga rekao o raskoši, mnogo o strastima, mnogo o porocima omladine, mnogo o moralu i, mada je obično blag i ponaša se baš s onom kulturnom obzirnošću koja se danas sviđa gotovo svima, u ovom je slučaju bio i prestrog, da tako kažem, stric, cenzor, učitelj; gospodina Celija izgrdio je kao što nikada nikog nije ni vlastiti otac; mnogo je i opširno govorio o manjku samokontrole i o neumjerenosti.</s>  <s>Što ćete više, gospodo suci?  Morao sam vam oprostiti što tako pozorno slušate, budući da sam se i sam ježio od tako strogog, tako oštrog načina izražavanja.</s>   
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="26"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Nego, prvi je dio bio onaj koji me manje uzrujao: da je gospodin Celije bio blizak mome dragom i poštovanom Bestiji, da je kod njega bio na gozbama, da ga je često kod kuće posjećivao, da se angažirao oko njegove preture.</s> <s>Ne uzrujava me ono što je vrlo očito neistinito; izjavio je, naime, da su na tim gozbama bili i oni kojih ili nema ili nužno moraju izjaviti isto.</s>  <s>Također, ne uzbuđuje me ni to što je izjavio da mu je gospodin Celije bio drug među Lupercima.</s>  <s>Surova je to družina, upravo govedarska i seljačka, braće Luperka, čije je ono znamenito divlje sastajanje poteklo iz vremena prije kulture i zakona, jer ne samo da drugovi jedan drugoga tuže, nego čak pri iznošenju optužbe posebno upozoravaju na svoje druženje, kao da se boje da bi to nekome promaklo!</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="27"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali neću o tome; odgovaram na ono što me jače pogodilo.</s>  <s>Kritika zbog putenosti bila je duga, čak i odviše mirna, i bilo je u njoj više argumentacije nego surovosti, zbog čega je i naišla na pozorniji prijem.</s> J<s>er dok se gospodin Klodije, moj dragi prijatelj, izražavao dramatično i silovito, nastupajući u nekom ognju, najtežim riječima, najvećom glasnoćom – mada sam se divio njegovoj retoričkoj vještini, ipak se nisam nimalo uplašio; već sam u nekoliko slučajeva vidio kako se uzalud angažira.</s>  <s>No, vama, gospodine Balbe, odgovorit ću prvo, dopustite, ako smijem, ako je pravo da branim onoga koji nijedan poziv na gozbu nije odbio, koji je  u vrtove dolazio, koji se parfemima koristio, koji je Baje vidjeti išao.</s> <milestone n="12" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="28"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Osobno sam u ovome gradu i upoznao i čuo za mnoge takve koji nisu samo rubom usana okusili takav način života – dotakli ga, kako se kaže, vršcima prstiju – već su čitavu svoju mladost posvetili nasladama, a u neko su vrijeme izronili i vratili se, kako se kaže, na pravi put, te postali ozbiljni i ugledni ljudi.</s> <s>Ta toj se dobi smije, svi se slažu, dozvoliti malo igre; i sama priroda donosi bujicu mladenačkih žudnji.</s>  <s>Izbiju li one tako da ne ugroze ničiji život, ne razore ničiji dom, redovno se smatraju bezopasnim i podnošljivim.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="29"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali vi ste, rekao bih, iz zajedničke sramote omladine pokušali stvoriti negativan dojam o gospodinu Celiju.</s>  <s>I tako je sva ona tišina poklonjena vašem govoru proizašla iz sljedećeg razloga: pred jednim smo okrivljenikom počeli razmišljati o porocima mnogih.</s>  <s>Lako je predbacivati neumjerenost.</s>  <s>Cijeli bih dan potrošio ako bih htio iznijeti sve što se na tu temu može reći; o slučajevima korupcije, preljuba, o besramnosti, o trošenju – toj raspravi nema kraja.</s>  <s>Da ne navedete nijednog konkretnog krivca, nego same te poroke, opet se sam predmet može napadati i brojnim i teškim riječima.</s>  <s>Ali na vašoj je mudrosti, gospodo suci, da ne dozvolite da se vašu pozornost odvrati od optuženika i da oštricom, kojom raspolažu vaša strogost i moralnost – a tužitelj ju je okrenuo protiv predmeta, protiv poroka, protiv situacije, protiv našeg doba – ne pogodite čovjeka, optuženika, izloženog nezasluženom zgražanju ne po svojoj odgovornosti nego zbog grijeha mnogih.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="30"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Stoga se ja vašoj strogosti, gospodine, onako kako treba odgovoriti ne usuđujem.</s>  <s>A bilo mi je moguće tražiti opravdanje zbog mladosti i moliti za oprost.</s>  <s>Ponavljam: ne usuđujem se; za pribježištem dobi neću nipošto posegnuti, pravo koje je svima dopušteno zaobilazim; tražim samo da, ukoliko u ovo naše vrijeme i postoji neko opće zgražanje zbog dugova, bezobraznosti, požuda omladine, a vidim da postoji, i to znatne veličine – tražim ipak da ovdje prisutnome ne naškode tuđi grijesi, niti nedostaci njegova naraštaja i našeg doba.</s>  <s>A isti taj ja koji iznosim takav zahtjev neću odbiti detaljan odgovor na optužbe koje se iznose protiv ovdje prisutnog osobno.</s> <milestone n="13" unit="chapter"/> 
+                  <s>Postoje, znači, dvije optužbe, za zlato i za otrov; u njima se susreće jedna te ista osoba.</s>  <s>Zlato je uzeto od gospođe Klodije, otrov je nabavljen da bude dan gospođi Klodiji, kako kažu.</s>  <s>Sve ostalo nisu optužbe nego uvrede, mjesto im je prije u prostačkoj svađi nego u sudskom procesu.</s>  <s>»Preljubnik, besramnik, posrednik za mito« – to je psovanje, to nisu optužbe.</s> <s>Za te tvrdnje nema nikakva temelja, nema osnove; to su uvredljive riječi koje su u afektu pobjegle razgnjevljenom tužiocu, bez ikoga tko bi ih potkrijepio.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="31"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N">
+                  <s>Za ove dvije optužbe vidim tko iza njih stoji, vidim odakle su potekle, vidim vrlo jasno ime i lice.</s>  <s>Trebalo je zlata; uzeo je od gospođe Klodije, uzeo bez svjedoka, držao ga je koliko je god dugo htio.</s>  <s>Vidim u tome najjasniji znak jedne vrlo posebne prisnosti.</s>  <s>Odlučio je istu gospođu ubiti; nabavio je otrov, podmitio robove, priredio napitak, ugovorio vrijeme i mjesto, dostavio.</s>  <s>Velika je mržnja, uviđam napokon, nastala nakon burnoga raskida.</s>  <s>Prvenstveno se moramo u ovom slučaju, gospodo suci, baviti gospođom Klodijom, damom ne samo plemenita roda, već značajne reputacije; o njoj neću reći ništa što nije motivirano pobijanjem iznesene optužbe.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="32"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali razumjet ćete zahvaljujući svojoj rafiniranoj razboritosti, gospodine Gneju Domicije, da se bavimo isključivo tom osobom.</s>  <s>Ako ona kaže da nije gospodinu Celiju ustupila zlato, ako ne dokazuje da joj je on priredio otrov, onda postupamo nepristojno, zbog toga što udanu ženu spominjemo na drugačiji način no što traži ugled matrone.</s>  <s>Ali ako bez te žene više ne ostaju ni optužba ni sredstva kojima bi se napadao Marko Celije, što drugo da radim ja, njegov odvjetnik, osim odbijanja onih koji nas progone?</s>  <s>I to bih činio još i odlučnije kad mi ne bi smetalo osobno neprijateljstvo s ove dame mužem – bratom, htio sam reći; uvijek se tu zabunim.</s>  <s>Sada ću biti suzdržan i neću ići dalje no što me primoravaju moja obaveza i sam sudski predmet; nikad nisam smatrao pametnim doći u sukob sa ženom, osobito s takvom koju su svi oduvijek smatrali prijateljicom sviju, a ne bilo čijom neprijateljicom.</s> <milestone n="14" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="33"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali ipak ću gospođu prvo pitati želi li da joj se obratim strogo i dostojanstveno i starinski, ili opušteno i nježno i kulturno.</s>  <s>Ako treba onim tvrdim načinom i običajem, morat ću s onoga svijeta prizvati jednog od onih bradonja, ne s bradicom u kakvoj dama uživa, već s onom neuređenom kakvu gledamo na drevnim kipovima i slikama; on neka prekori tu ženu i neka govori umjesto mene, kako se ona ne bi kojim slučajem na mene naljutila.</s>  <s>Neka onda ustane netko iz njihova vlastita roda, i to najbolje baš onaj slijepac Ceko; najmanje će ga boljeti jer je neće moći vidjeti.</s>
+                  <s>Znači, on, ako ustane, ovako će se postaviti i ovako će progovoriti:</s> <s>»Ženska glavo, što će ti Celije, što će ti mlad momak, što će ti stranac?</s>  <s>Zašto si s njim bila toliko bliska da mu posudiš zlato, i zašto si ga toliko mrzila da moraš strepiti od njegova otrova?</s> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="34"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N">
+                  <s>Nisi li vidjela da su tvoj gospodin otac, stric, djed bili konzuli, nisi li to čula o pradjedu, prapradjedu, šukundjedu?  Nisi li, napokon, znala da si obvezana brakom s gospodinom Metelom, sjajnim i uglednim mužem, najvećim domoljubom, koji je, čim je nogom prekoračio prag, doslovno sve građane nadmašio vrlinom, slavom, dostojanstvom?</s>  <s>Potekavši iz glasovita roda, udavši se u dičnu obitelj, što te to s Celijem tako vezalo?</s> <s>Je li ti rođak, svojta, prijatelj tvog supruga? Ništa od toga.</s>  <s>Što te onda vezalo ako ne nekakva avantura, nekakva požuda?</s>  <s>Nije li te moglo, ako likovi nas muškaraca nisu na tebe djelovali, barem moje dijete, ona slavna Kvinta Klaudija, potaknuti da se s njom natječeš u borbi za žensku slavu svoga roda, niti ona vestalska djevica Klaudija koja, zagrlivši oca trijumfatora, nije dozvolila da je mržnja pučkoga tribuna skine s kola?</s>  <s>Zašto su te nadahnuli bratski poroci, a ne valjanost očinska, djedovska, sve do nas opetovano očitovana kako s muške tako i sa ženske strane?</s>  <s>Jesam li ja mir s Pirom onemogućio zato da ti svakodnevno sklapaš najsramotnije ljubavne sveze, jesam li vodu doveo zato da se njome ti koristiš u nečiste svrhe, jesam li cestu izgradio zato da ti po njoj juriš u pratnji stranih muškaraca?«</s>
+                  <milestone n="15" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="35"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali zašto sam to ja, gospodo suci, odabrao tako ozbiljnu ulogu da se moram bojati da će se isti taj Apije naglo okrenuti i početi Celija optuživati istom tom svojom cenzorskom ozbiljnošću?</s>  <s>Za to ću se pobrinuti kasnije, i to na taj način, gospodo, da način života gospodina Marka Celija budem u stanju bez tračka sumnje opravdati i pred najstrožim ispitivačima.</s>  <s>A vi, ženo – sad već s vama govorim osobno, izvan bilo kakve uloge – ako to što činite, što govorite, što hinite, što snujete, što optužujete, ako to namjeravate dokazati, nužno je da podnesete i izložite razlog za toliku prisnost, takvo druženje, takvu vezu.</s>  <s>Da, tužitelji predbacuju požudu, avanture, preljube, Baje, plaže, gozbe, bakljade, pjesme, svirke, jahte, i jasno pokazuju da ništa ne govore protiv vaše volje.</s>  <s>Stoga, budući da ste sve to vi sami, po nekoj divljoj i nagloj odluci, poželjeli iznijeti na forum i pred sud, morate sad ili okajati i iskazati da je lažno, ili priznati da se ništa ne smije vjerovati ni vašim optužbama ni svjedočenju.</s>
+                  <milestone n="16" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="36"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Želite li pak da se ponašam kultiviranije, ovako ću ja s vama.</s>  <s>Maknut ću tog grubog starca, gotovo seljačinu; odabrat ću nekoga od ovdje prisutnih, i to najbolje najmlađeg brata, koji je na tom području najkultiviraniji; on vas izuzetno ljubi, on bi zbog nekakve, valjda, plašljivosti i straha od mraka, kao vječna bebica stalno s vama, starijom sestrom, spavao.</s>  <s>Zamislite da vam se on obraća:</s> <s>»Sestro moja, što stvaraš nered? Što luduješ?</s>  <s>Što dižeš buku i od sitne stvari riječima praviš krupnu?</s>  <s>Zapazila si mladića iz susjedstva; privukli su te njegov ten i stas, lice i oči; htjela si se s njim viđati; više puta si bila u vrtu kad i on; sada želiš, kao žena plemenita roda, toga neemancipiranog sina štedljiva i savjesna oca uza se vezati svojim bogatstvom.</s>  <s>Ne ide; riće se, pljuje, odbija, ne smatra tvoje darove dovoljno vrijednima.</s>  <s>Kreni drugim putem.</s> <s>Imaš vrtove uz Tiber, smještene točno ondje kamo sva omladina dolazi da bi se kupala; tamo možeš svakodnevno birati para; zašto gnjaviš ovoga koji te neće?«</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="37"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Sad se vraćam k vama, gospodine Celije, i opet ću nastupiti u ulozi očinskoga autoriteta i strogosti.</s>  <s>Ali nisam siguran kojeg da oca odaberem, nekog od Cecilijevih, naprasitih i surovih:</s> <s>»Sada mi tek duša gori, sad mi se srce srdžbom prelijeva«, ili onoga »Nesretniče, zločinče!«</s>  <s>Od željeza su ti očevi:</s> <s>»Ja što kažem, ja što želim? Ono što ti svojim gadnim djelima činiš da uzalud želim«, gotovo nepodnošljivi.</s>  <s>Takav bi otac rekao:</s> <s>»Zašto si otišao u to bludničko susjedstvo?</s>  <s>Zašto, kad si shvatio o kakvim se mamcima radi, nisi pobjegao?</s>  <s>»Zašto si upoznao ijednu ženu tuđu?</s> <s>Troši i rasipaj;
+                     smiješ, što se mene tiče.</s> <s>Ako bankrotiraš, boljet će tebe, a ne mene.</s> <s>Meni je dosta da u vijeku koji mi osta uživam.«</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="38"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Tom mrkom starcu bez dlake na jeziku gospodin bi Celije odgovorio da ga nikakva požuda nije navela da skrene s puta.</s>  <s>Po čemu se to vidi?</s> <s>Nema troškova, nema traćenja, nema kredita.</s>  <s>Ali širio se trač.</s> <s>Koliko to ljudi može izbjeći, osobito u državi koja toliko voli klevete?</s>  <s>Čudiš se što je na lošem glasu bio susjed one žene čiji rođeni brat nije mogao izbjeći zločeste priče?</s>
+                  <s>A pred blagim i milosrdnim ocem kao što je onaj »vrata je razbio, popravit će se; kaput poderao, zakrpat će se«, Celijev je slučaj vrlo jednostavan.</s>  <s>Ima li, naime, ičeg u čemu se ne bi lako mogao obraniti?</s>  <s>Neću više ništa govoriti protiv ovdje prisutne žene; ali kad bi postojala neka posve drugačija od nje, koja se podaje svima, koja uvijek i javno nekoga bira, u čije vrtove, kuću, Baje slobodno zalaze svačije požude, koja čak i uzdržava mladiće i štedljivost otaca nadomješta svojim izdacima; kad bi udovica živjela slobodno, besramnica bezobrazno, bogatašica rasipno, pohotnica poput bludnice, bih li preljubnikom smatrao onoga tko bi je nešto slobodnije pozdravljao?</s>
+                  <milestone n="17" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="39"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Reći će netko:</s> <s>»To je, znači, taj tvoj nauk?</s> <s>Tako ti odgajaš mladiće?</s> <s>Iz tog je razloga roditelj tebi povjerio i predao ovog momka, da svoju mladost uplete u ljubavnu avanturu i naslade, pa da ti braniš taj život i takve interese?«</s>  <s>Ja, gospodo suci, takvoga, tko bi bio tako čvrsta duha i tako duboke vrline i samokontrole da prezre sve naslade, da čitav svoj životni tijek odredi tjelesnim naporom i duhovnom borbom, da ne uživa u slobodnom vremenu, odmoru, zabavama vršnjaka, igrama, gozbama, da u životu stremljenja vrijednim ne smatra ništa osim onog što je povezano sa slavom i dostojanstvom – takvoga, to je moje mišljenje, smatram božanskim darovima obdarenim i urešenim.</s>  <s>Takvi su ljudi, mislim, bili oni Kamili, Fabriciji, Kuriji, i svi drugi koji su ovu zemlju od najmanje učinili ovolikom kakva jest.</s> </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="40"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali ove se vrste vrlina danas već jedva mogu naći ne samo u našim karakterima nego i u knjigama.</s>  <s>Ostarjeli su i sami listovi koji su čuvali spomen o drevnoj strogosti; i to ne tek kod nas, koji smo takvu filozofiju i životnu orijentaciju slijedili više djelom nego riječima, nego i kod Grka, najučenijih ljudi, koji možda nisu mogli djelovati časno i uzorito, ali su ipak smjeli tako govoriti i pisati; i kod njih su se pojavile neke druge upute pošto se promijenila grčka politička situacija.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="41"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>I tako su pojedinci ustvrdili da mudraci sve čine radi užitka, a obrazovani ljudi nisu pobjegli od sramote takve teze; drugi su iznijeli stav da s užitkom treba povezati dostojanstvo, te su posve suprotne stvari povezali vještinom govora; a oni koji su priznavali samo jedan izravan put do slave, uz trud i napor, već su u svojim predavaonicama ostali praktički sami.</s>  <s>Mnoge je za nas atrakcije dala sama priroda, one su uljuljkale vrlinu te je ona znala zadrijemati; mnogi su skliski putovi pokazani mladosti, na njih se teško može stati ili njima krenuti bez pada i posrtanja; šarena je ponuda mnogih ugodnih stvari kojima opčinjeno bude ne samo to prvo doba, nego i ono koje je već očvrslo.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="42"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Zbog toga, ako možda i nađete nekoga čije bi oči prezrele ljepotu, tko ne bi mogao biti opčinjen nikakvim mirisom ni dodirom ni okusom, čije bi uši odbile svaku ugodu, takvog bismo čovjeka ja i možda još nekolicina smatrali bozima milim, a većina bi držala da ga bozi mrze.</s>
+                  <s>Stoga taj put, napušten, neodržavan, već obrastao grmljem i šikarom, valja napustiti.</s>  <s>Neka se dobi dopusti malo igre; neka mladost uživa u nešto većoj slobodi; neka se užicima ne uskrati baš sve; neka ne prevlada uvijek ono pravo i istinito učenje; neka želja i naslada koji put pobijede razum, ukoliko se održe sljedeća općenita pravila i ograničenja: omladina neka pazi na svoje poštenje, neka ne uništava tuđe, neka ne rasipa očevinu, neka ne pogine pod kamatama, neka ne nasrne na tuđi dom i obitelj, neka ne donosi porok čistima, grijeh nevinima, sramotu valjanima, neka nikog ne straši silom, ne postavlja zasjede, ne okalja se zlodjelom.</s>  <s>A napokon, pošto se odala užicima, potrošila nešto vremena na igru prikladnu dobi i na te svoje besmislene mladenačke požude, neka se u neko doba vrati brizi za obiteljski imetak, za pravosuđe i politiku; neka se vidi da je ono što ranije nije mogla pomoću razuma prepoznati sada odbacila zbog zasićenja, da je iskušala i nadišla.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="43"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Međutim, mnogo je bilo, i koliko se mi sjećamo i naši oci i preci, gospodo suci, istaknutih ljudi i najuglednijih građana koji su, pošto su iskipjele žudnje njihove mladosti, u već sazreloj dobi pokazali iznimne vrline.</s>  <s>Od njih ne bih nikog imenovao; vi ćete se i sami u sebi sjetiti.</s>  <s>Ne bih htio, naime, ni kod jednog vrlog i dičnog velikana s vrhuncem slave povezivati čak ni najmanju pogrešku.</s>  <s>Ali kad bih htio tako postupiti, mogao bih nizati mnoge istaknute i ugledne osobe u čijoj se mladosti spominjala bilo prekomjerna slobodoumnost, bilo nekontrolirana rasipnost, veličina dugova, izdataka, naslada; to bi svatko mogao opravdati mladošću, budući da je kasnije pokriveno obiljem vrlina.</s>
+                  <milestone n="19" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="44"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali kod gospodina Marka Celija – i sada ću već s nešto više hrabrosti govoriti o njegovim poštovanja vrijednim interesima, jer se usuđujem ponešto otvoreno priznati, uzdajući se u vašu mudrost – neće se naći nikakva odanost raskoši, nikakva rastrošnost, nikakvi dugovi, nikakva strast za gozbama i razvratom.</s>  <s>Pritom mane želuca i grla kod ljudi starija dob ne samo da ne smanjuje, upravo suprotno, povećava ih.</s>  <s>A ljubavne afere i ono što zovu erotikom, što u zrelijoj dobi već dosta dugo nije problem – interes opadne rano i brzo – ovog čovjeka nikad nisu zanimali ili zarobljavali.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="45"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N">
+                  <s>Čuli ste kad je govorio o vlastitoj stvari, čuli ste i prije kad je nastupao kao tužitelj – ovo govorim da bih ga branio, ne da bih ga hvalio – retorički nastup, sposobnost, bogatstvo misli i riječi, sve ste to, za što ste itekako kompetentni, mogli dobro uočiti.</s>  <s>Pritom ste vidjeli da ne blista samo talent, koji često može doći do izražaja sam po sebi, čak i kad nije podržan obrazovanjem; bilo je kod njega, ukoliko se nisam prevario zbog pristranosti, i vještine izgrađene valjanim umijećima i usavršene trudom i upornošću.</s> <s>Ali morate znati, gospodo suci, da one strasti koje se predbacuju gospodinu Celiju i ovi interesi o kojima pričam ne mogu lako obitavati u istoj osobi.</s>  <s>Naprosto nije moguće da duh prepušten užitku, ljubavi, požudi, željama, često sputavan prekomjernim obiljem, a ponekad i neimaštinom, da takav duh bude u stanju baviti se onim, ma što to bilo, što činimo kad javno govorimo, ma kako to činili. Ne da ne može djelovati, ne može čak ni tako razmišljati.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="46"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ili možda smatrate da postoji neki drugi razlog zbog kojeg, usprkos takvim nagradama za retoričku sposobnost, takvom užitku koji donosi govorenje, usprkos takvoj slavi, takvom utjecaju, takvim častima – ipak ima, i uvijek je bilo tako malo onih koji se posvećuju ovim naporima?</s> <s>Treba potisnuti sve užitke, odbaciti zabavne aktivnosti, igre, šale, druženja; gotovo da se i razgovora s prijateljima treba odreći.</s>  <s>To je pravi razlog zašto napori na ovom području ljude odbijaju i od te ih djelatnosti odvraćaju, a ne zato što bi manjkalo talenata ili obrazovanja u djetinjstvu.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="47"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Bi li ovdje prisutan gospodin, da se odao onakvom životu, bio mogao, još kao gotovo tinejdžer, izvesti pred sud bivšeg konzula?</s>  <s>Da je ovdje prisutni izbjegavao svaki napor, da je bio ovisan o užicima, bi li se svakodnevno pojavljivao na ovome bojnom polju, bi li nasrtao na protivnike, izvodio ih pred sud, izlagao se životnoj opasnosti, bi li se sam, naočigled čitava rimskog naroda, već toliko mjeseci borio ili za opstanak ili za slavu?</s>  <s>Ne miriše li ovdje nešto na ono susjedstvo, ne govore li ništa glasine, pa ni same Baje?</s>  <s>E, one ne da govore, one odjekuju: strast jedne žene otišla je tako daleko da ne traži samo pusta i mračna mjesta, niti te uobičajene paravane za poroke, već uživa u najsramotnijim aktivnostima pred najvećim brojem ljudi, na najsjajnijem svjetlu dana!</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="48"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Međutim, nađe li se netko tko bi smatrao da su omladini zabranjene čak i veze s bludnicama, taj, doduše, jest iznimno moralan – ne mogu poreći – ali u neskladu je ne samo sa raspuštenošću ovoga doba nego i s običajem i ustupcima naših starih.</s>  <s>Jer, kad se nije tako radilo, kad se tako što osuđivalo, kad nije bilo dozvoljeno; kad je, gospodo, bilo da se ne smije ono što se smije?</s>  <s>Sad ću definirati samo o čemu se radi, a neću imenovati nijednu ženu; samo ću iznijeti činjenice.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="49"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>U slučaju da neka žena bez supruga svoj dom učini dostupnim svačijoj pohoti i javno se prepusti bludničkom načinu života; ako sudjeluje u gozbama posve tuđih muškaraca; ako to čini u gradu, ili u vrtovima, ili u onoj općoj gužvi u Bajama; ako se, naposljetku, takvom očituje ne samo po načinu hoda već i izgledom i pratnjom, ne samo zažarenim očima, ne slobodnim razgovorima, već i zagrljajima, ljubljenjem, na plaži, na palubi, na gozbi, nastupajući ne samo kao bludnica, već kao besramna i provokativna bludnica; ako bi s takvom jednom neki mladić bio, bi li vam se on, poštovani gospodine Lucije Herenije, činio preljubnikom ili mušterijom; bi li izgledalo da je htio oskvrnuti čednost ili naprosto zadovoljiti želju?</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="50"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Sad već zaboravljam vaše nepravde, gospođo Klodija, potiskujem sjećanje na svoj jad; prelazim preko onog što ste okrutno činili protiv mene za moga izbivanja; ne odnosile se na vas one riječi koje sam izrekao!</s> <s>Ali od vas bih osobno htio čuti odgovor, budući da tužitelji tvrde da optužba ovisi o vama i da ste za tu optužbu vi osobno svjedokinja:</s> <s>ako bi postojala neka žena one vrste kakvu sam maločas opisao, posve drugačija od vas, po načinu života i ponašanju bludnica, bi li vam se činilo krajnje sramotnim i poročnim ako bi s takvom mlad čovjek nešto imao?</s>  <s>Ako vi niste takva žena, što bi mi bilo mnogo draže, što onda gospodinu Celiju tužitelji mogu predbaciti?</s>  <s>A ako žele da budete takva, zašto da se bojimo takve optužbe, ako je vi ignorirate?</s>  <s>Stoga nam pokažite put i strategiju obrane: ili će vaša čednost obraniti tvrdnju da gospodin Celije nije učinio ništa bitno nedolično, ili će besramnost i njemu i ostalima dati odličnu mogućnost da se brane.</s><milestone n="21" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="51"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali, budući da se moj govor već, čini se, izvukao iz pličina i provukao se kraj hridi, ostatak plovidbe ukazuje mi se posve lakim.</s>  D<s>vije, naime, optužbe počivaju na jednoj ženi odgovornoj za brojna nedjela: optužba za zlato – uzeto, kaže se, od gospođe Klodije – i za otrov – gospodina Celija optužuju da ga je pripremio radi ubojstva iste gospođe Klodije.</s>  <s>Zlato je uzeo, kako kažete, da bi ga dao robovima Lucija Lukceja, koji su trebali izvesti ubojstvo Diona iz Aleksandrije (on je tada stanovao kod gospodina Lukceja).</s> <s>Krupna je to optužba, kako zbog pripreme atentata na poslanike, tako i zbog poticanja robova da umore gosta svojeg gospodara; plan prožet zločinstvom, prožet beskrupuloznošću!</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="52"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>No, što se te optužbe tiče, prvo zahtijevam odgovor na sljedeće: je li rekao gospođi Klodiji zašto uzima zlato ili nije rekao?</s>  <s>Ako nije rekao, zašto mu je dala?</s>  <s>Ako je rekao, preuzela je teret sudjelovanja u istom zločinu.</s>  <s>Zar ste se vi usudili izvaditi zlato iz svoje škrinje, zar ste vi zaplijenili nakit onoj svojoj poznatoj Veneri, pljeniteljici drugih muškaraca, a znali ste za kakvo je nedjelo potrebno to zlato, za umorstvo poslanika, za vječno kaljanje ljagom zločina imena gospodina Lukceja, čovjeka čista morala i neokrnjena integriteta?</s>  <s>Tome i tolikom nedjelu nije smjela vaša širokogrudna svijest biti saučesnicom, vaša narodoljubiva kuća biti pomoćnicom; na kraju krajeva, ona vaša općapoznata domaćinska Venera nije smjela biti pomoćnicom.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="53"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Gospodin Balbo to je imao u vidu; rekao je da je gospođa Klodija ostala u neznanju, i da je Celije zlato tražio pod izlikom da mu treba za opremanje igara.</s>  <s>Ako je s gospođom Klodijom bio onoliko blizak koliko biste vi htjeli da jest, kad tako mnogo govorite o njegovoj strasti, sigurno bi rekao za što mu zlato treba; da nije bio tako blizak, ne bi mu dala.</s>  <s>Stoga, ako vam je Celije priznao istinu, o, vi ženo izvan kontrole, dali ste mu zlato za zločin pri punoj svijesti; ako se nije usudio priznati, niste mu ga dali.</s>
+                  <milestone n="22" unit="chapter"/> 
+                  <s>Što da se sad dalje ovoj optužbi suprotstavljam dokazima, a ima ih bezbroj?</s>  <s>Mogao bih reći da je moral gospodina Celija miljama daleko od okrutnosti tolikog grijeha; da nipošto ne treba povjerovati kako toliko inteligentnom i toliko razboritom čovjeku ne bi palo na pamet da izvođenje takvog zlodjela ne treba povjeriti nepoznatim i tuđim robovima.</s>  <s>Mogao bih gospodinu tužitelju postaviti i druga pitanja, po običaju drugih odvjetnika i po svojem vlastitom: gdje se gospodin Celije susreo s robovima gospodina Lukceja, kako je s njima stupio u vezu; ako je to učinio osobno, koje li nepromišljenosti! ako je drugi posredovao, tko je to bio?</s>  <s>Mogao bih govorom pretresti svaki zakutak razumne sumnje: neće se naći ni motiv, ni mjesto, ni mogućnost, ni saučesnik, ni nada u uspjeh i skrivanje zlodjela, ni način, ni trag silnoga nedjela.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="54"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali to što je specijalnost govornika, što bi mi – ne zbog mojeg dara, već zbog izvjesne vježbe i prakse u govorničkom nastupu – moglo donijeti određen plod, obzirom da bi se moglo činiti kako iznosim nešto što sam sam priredio, od svega toga odustajem kratkoće radi.</s> <s>Jer uza me je, gospodo suci, netko kome ćete laka srca dopustiti da se pridruži svetosti vaše zakletve, gospodin Lukcej, besprijekorna osoba i najpouzdaniji svjedok, koji toliko strašno zločinstvo prema svome ugledu i dobrobiti sa strane gospodina Celija ne bi mogao prečuti, niti bi ga mogao zanemariti, niti bi ga mogao dopustiti.</s> <s>Ta zar bi takav čovjek, tolike kulture, s takvim interesima, takva znanja i učenosti mogao zanemariti opasnost po onoga kog je ljubio upravo zbog te znanosti same, zar bi protiv zlodjela, na koje bi – da prijeti nekom strancu – reagirao odlučno, propustio poduzeti mjere kad prijeti njegovu gostu?</s>  <s>Da su nepoznati počinili takvo djelo ono bi ga, da je za nj saznao, povrijedilo; bi li ga zanemario da ga pokušaju izvesti njegovi robovi?</s>  <s>Ono što bi osudio da se dogodi na polju ili na javnom mjestu, bi li to mirno podnio ako se pokušava u gradu i u njegovom domu?</s> <s>Ono što ne bi dozvolio u slučaju prijetnje nekom seljaku, bi li obrazovan čovjek htio ignorirati kad se nasrće na velikog znanstvenika?</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="55"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali zašto vas tako dugo, gospodo suci, zadržavam?</s>  <s>Primite na znanje svetost zakletve i autentičnost spisa, te pomno poslušajte sve riječi svjedočanstva.</s>  <s>Izvoli pročitati.</s> <s>Lukcejevo svjedočanstvo.</s>
+                  <s>Što vam još treba?</s>  <s>Mislite li da neki glas od sebe mogu dati sam predmet, sama istina?</s>  <s>Evo obrane nevinosti, evo govora samoga predmeta, evo jedinoga glasa istine.</s>  <s>U optužbi nema povoda za sumnju, u činjeničnom stanju nema dokaza, u djelu za koje se tvrdi da je počinjeno nema traga dogovora, mjesta, vremena; ne navodi se nijedan svjedok, nijedan saučesnik, čitava optužba stiže od dušmanske, od zloglasne, od surove, od zločinačke, od raskalašene kuće.</s>  <s>A ona kuća u kojoj je, tvrdi se, to gnjusno zlodjelo pokušano obiluje moralnošću, dostojnošću, osjećajem dužnosti i svete obaveze; iz te vam je kuće pročitan prisegom ovjeren autentičan iskaz, tako da treba presuditi o pitanju koje nije nimalo dvojbeno: je li optužbu izmislila bezobzirna, nasrtljiva, uvrijeđena žena ili je svjedočanstvo izrekao ugledan, mudar i moralan čovjek.</s> <milestone n="23" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="56"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Preostala je, znači, optužba za trovanje; njoj, moram priznati, niti mogu naći početak niti islijediti ishod.</s>  <s>Koji je to bio razlog zbog kojeg je ovdje prisutnu ženu gospodin Celije htio otrovati?</s>  <s>Da joj ne mora vratiti zlato?</s>  <s>Zar ga je tražila?</s>  <s>Da izbjegne optužbu?</s>  <s>Zar ju je netko iznio?</s>  <s>Zar bi itko, konačno, išta spomenuo, da ovaj gospodin nije ničije ime bio prijavio sudu?</s>  <s>Dapače, čuli ste gospodina Herenija kako kaže: ni jednom riječi ne bi pravio probleme Celiju da ovaj nije ponovo zbog iste stvari podnio prijavu, mada je član Herenijeve obitelji već bio oslobođen.</s>  <s>Može li se onda vjerovati da je takvo zlodjelo počinjeno bez ikakva razloga?</s>  <s>Ne vidite li da se izmišlja optužba za najteži zločin kako bi poslužio kao razlog za poduzimanje drugog zločina?</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="57"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Konačno, koga je za to angažirao, tko mu je bio pomagač, saveznik, saučesnik, kome je mogao vjerovati u vezi s takvim zlodjelom, kome je mogao povjeriti sebe, svoj opstanak?</s>  <s>Zar robovima te iste žene?</s>  <s>A upravo to tvrdi optužba.</s>  <s>I toliko je bezuman bio onaj čiju ćete umnost zasigurno priznati (čak i ako ostalo odbacite zbog agresivnog tužilačkog nastupa) da svu svoju sudbinu stavi u ruke tuđih robova?</s>  <s>Ali kojih robova?  – i to je, da se razumijemo, iznimno bitno – zar onih za koje mu je bilo jasno da se ne nalaze u uobičajenom ropskom položaju već da uz svoju gospodaricu žive slobodnije, raspuštenije i prisnije?</s>  <s>Ta tko ne vidi, gospodo suci, ili tko ne bi znao da u jednoj od onih kuća u kojima gospođa, glava obitelji, živi bludničkim načinom života, u kojoj se ne događa ništa što bi se smjelo spomenuti u javnosti, koja je puna neuobičajenih strasti, dekadentnosti, pa i, da znate, svih nečuvenih poroka i razvrata – da tamo robovi nisu robovi, da se njima sve može povjeriti, da u svemu sudjeluju, da se upuštaju u iste te naslade, da se s njima dijeli ono što treba ostati skriveno, da do njih stiže i ponešto od svakodnevnog trošenja i luksuza?</s> <s>To, znači, gospodin Celije nije vidio?</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="58"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Jer, ako je bio tako blizak sa ženom kao što biste vi htjeli, morao je znati da su i ti robovi bliski s gospodaricom.</s>  <s>Ali ako veza nije bila baš tako čvrsta koliko tvrdite, kako je mogao s njezinim robovima biti tako blizak?</s>   <s>Nadalje, što se samog trovanja tiče, koji se način pretpostavlja?</s>  <s>Gdje je otrov bio tražen, kako pribavljen, na koji način, kome, na kome mjestu predan?</s>  <s>Vele, imao ga je doma i iskušao mu snagu na nekom robu nabavljenom upravo za tu svrhu; njegovom vrlo brzom smrću navodno je ovdje prisutni potvrdio djelotvornost otrova.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="59"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>O, besmrtni bozi! Zašto ponekad najstrašnija zlodjela ljudska ili podupirete, ili za buduće doba odgađate kaznu sadašnje prevare?</s>  <s>Da, vidio sam, vidio i doživio bol možda najljuću u svome životu, kad je gospodin Metel bio otrgnut iz krila i zagrljaja domovine, i kad je taj junak, koji se smatrao rođenim za ovu državu, trećeg dana pošto je u kuriji, na rostri, na političkoj sceni dokazao svoje snage, u najotpornijoj dobi, u najboljem stanju, u naponu snaga bio na nedostojan način otet našim najboljima i cjelokupnoj zajednici.</s> <s>U to je vrijeme – da, na samrti – on, mada mu je već um sa svih ostalih strana trpio, posljednji tračak svijesti sačuvao za spomen na državu; gledajući moj plač isprekidanim riječima umirućeg najavio je kakva oluja prijeti meni, kakva nepogoda državi, i uz opetovane udarce u onaj zid koji je dijelio s gospodinom Katulom često je spominjao Katulovo ime, često moje, a najčešće državu, pateći ne toliko što umire, nego što bez njegove zaštite ostaje domovina, a i ja s njom.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="60"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Eto, takav čovjek! A da ga nije odnijela neka sila neočekivanog zla, na koji bi se on način, kao bivši konzul, suprotstavio svome pomahnitalom bratu? On koji je kao konzul – dok je brat tek počinjao mahnitati i prijetiti – pred senatom izjavio da će ga ubiti vlastitom rukom?</s>  <s>Iz takve, znači, kuće dolazi ova ovdje žena, a usudit će se govoriti o brzini otrova?</s>  <s>Neće li se uplašiti same kuće, koja bi mogla progovoriti, zidova, koji sve znaju; neće li je u paniku natjerati ona noć grozna i žalosna?</s>  <s>Ali vraćam se na optužbu; znate, zbog spomena na onog slavnog i silnog čovjeka jecaj je mome glasu oduzeo snagu, a bol je omela moj duh.</s><milestone n="25" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="61"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Nego, svejedno; odakle je došao taj otrov, na koji je način pribavljen, to se ne govori.</s> <s>Kažu da ga je ovdje prisutni dao gospodinu Liciniju, čednom i valjanom mladiću iz Celijeva kruga; da je s robovima dogovoreno da dođu u Senijevo kupalište; da će onamo doći isti gospodin Licinije i predati im ampulu s otrovom.</s>  <s>Ovdje prvo pitam sljedeće: zašto je trebalo ugovarati sastanak na takvom mjestu, zašto ti robovi nisu došli u Celijevu kuću?</s>  <s>Ako je postojala onakva veza s Celijem, onolika bliskost s gospođom Klodijom, kakav bi razlog za sumnju dalo pojavljivanje roba te žene kod gospodina Celija?</s>  <s>A ako je već došlo do svađe, prekinula se veza, razišli se – otuda te suze; pa da, to je pravi razlog svih ovih zločina i optužbi!</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="62"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N">
+                  <s>Kaže: »Dapače, kad su robovi gospodarici prijavili cijelu stvar i Celijevu spletku, dosjetljiva im je žena naredila da pristanu na sve Celijeve zahtjeve; ali, kako bi se otrov, kad ga Licinije preda, mogao oduzeti pred svjedocima, zapovijedila je da dogovore mjesto sastanka u Senijevu kupalištu, da bi onamo poslala prijatelje koji će se sakriti, a onda će iznenada, čim Licinije dođe i preda otrov, iskočiti i uhvatiti ga.«</s> <milestone n="26" unit="chapter"/> <s>Sve se to, gospodo suci, može na vrlo lak način dovesti u pitanje.</s> <s>Zašto je dogovor bio upravo u javnom kupalištu?</s>  <s>Nije mi jasno gdje se tamo mogu sakriti ljudi u togama.</s>  <s>Jer, da je dogovor bio u vestibulu kupališta, ne bi se mogli sakriti; a da su se htjeli smjestiti unutra, obuveni i odjeveni to ne bi mogli na prikladan način izvesti, a možda ih ne bi ni pustili, osim u slučaju da utjecajna žena zbog one ponude za četiri asa nije postala bliska s upraviteljem kupališta.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="63"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>I, što se mene tiče, napeto sam iščekivao koja će to ugledna gospoda biti navedena kao svjedoci te javne zapljene otrova; ali zasad još nitko nije imenovan.</s> <s>No, ne sumnjam da se radi o izrazito dostojnim osobama koje su, prvo, bliske s takvom ženskom, a osim toga raspolažu takvim ovlastima da se mogu progurati u kupalište, što ta dama, ma kako utjecajna bila, ne bi nikad postigla da se ne radi o posebno poštovanoj i uglednoj gospodi.</s>  <s>Ali zašto da govorim o ugledu tih svjedoka?</s>  <s>Sami procijenite njihovu vrlinu i posvećenost.</s>  <s>»Sakrili su se u kupalištu.«</s> <s>O, vrijednih li svjedoka!</s> <s>»Onda su u krivi čas iskočili.«</s> <s>Odmjerenih li ljudi!</s>  <s>Dakle, ovako izmišljate: kad je došao gospodin Licinije, držeći ampulu u ruci, i pokušao je predati, a još je nije predao, tada su odjednom izletjeli ti krasni bezimeni svjedoci; a Licinije, kad je već pružio ruku da će predati ampulu, ruku je povukao i zbog tog iznenadnog napada nepoznatih dao se u bijeg.</s>  <s>O divne li sile istinitosti, koja se protiv ljudske mašte, lukavosti, prepredenosti i protiv zlonamjernih konstrukcija sviju lako može samom sobom obraniti!</s> <milestone n="27" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="64"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Na primjer: čitav ovaj mali igrokaz poznate autorice mnogobrojnih uspješnica, kako mu nedostaje zapleta, kako ne može doći do razrješenja!</s> <s>Pazite, ta mnogobrojna gospoda – jer morao ih je biti nemali broj kako bi se Licinija moglo lako uhvatiti i kako bi stvar, zbog mnogo očiju, bila bolje posvjedočena – zaštu su Licinija ispustila iz ruku?</s>  <s>Kako je Licinijevo hvatanje onemogućila okolnost da se povukao, da nije predao ampulu, zašto ga se moglo uhvatiti samo da je predao?</s>  <s>Pa njihov je zadatak bio da uhvate Licinija, da Licinije bude uhvaćen na djelu, ili dok ima otrov sa sobom ili kad ga je predao.</s>  <s>U tome je bio gospođin plan, to je bila misija tih ljudi uzetih u angažman; a iz kojeg razloga vi za njih kažete da su u krivi čas iskočili i prije nego što je trebalo, to ne mogu razumjeti.</s>  <s>Bili su za to angažirani, bili su u tu svrhu ondje raspoređeni, kako bi javno bili zatečeni i otrov, i tajno djelovanje, pa i čitavo to zlodjelo.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="65"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Jesu li mogli iskočiti u bolji čas nego kad je došao Licinije, dok je u ruci držao ampulu otrova?</s>  <s>Jer kad bi ona jednom već bila predana robovima, da su iznenada iz kupališta nahrupili gospođini prijatelji i da su uhvatili Licinija, on bi se pozvao na njihovo poštenje i porekao da je ta ampulu dobivena od njega.</s>  <s>Kako bi ga oni mogli opovrgnuti?  Zar da kažu da su sami vidjeli?</s>  <s>Prvo bi na svoje glave preusmjerili optužbu za krajnje ozbiljan zločin; onda, tvrdili bi da su vidjeli ono što s mjesta na kojem su se nalazili nisu mogli vidjeti.</s>  <s>Pokazali su se, dakle, baš u trenutku kad je Licinije došao, izvadio ampulu, pružio ruku, predavao otrov.</s>  <s>To je već finale mima, a ne igrokaza; u takvim komadima, kad se ne može naći rasplet, netko se nekome otme iz ruku i pobjegne, a onda zazveče kastanjete, spusti se zastor.</s><milestone n="28" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="66"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Jer, ja vas pitam, zašto je gospodina Licinija, uzdrhtalog, zbunjenog, ustuknulog, kad je pokušao bježati ta ženstvena družina ispustila iz svojih šaka, zašto ga nisu uhvatili, zašto nisu na osnovi njegova priznanja, očevida velikog broja svjedoka, pa i samog glasa o zlodjelu izvukli sigurnu tužbu za tako težak zločin.</s>  <s>Zar su se bojali da njih toliko ne bi moglo savladati jednoga, jaki ljudi nemoćnoga, borbeni uspaničenoga?</s>
+                  <s>Nikakav se materijalni dokaz neće naći u ovom događaju, nikakav razlog za sumnju u ovoj stvari, nikakav uspješan kraj za optužbu.</s>  <s>Zato je cijela stvar s dokaza, s indicija, s onih znakova kojima se obično rasvjetljava istina u cijelosti prenesena na svjedoke.</s>  <s>A te svjedoke ja, gospodo suci, očekujem ne samo bez imalo straha, nego čak i s nadom da ćemo se malo zabaviti.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="67"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Već trepti moj duh pred prizorom, prvo, finih mladića koji su prijatelji raskošne i plemenite dame; drugo, hrabrih junaka koje je komandantica rasporedila u zasjedu i na stražu u kupalište.</s>  <s>Postavit ću im pitanje na koji su se način sakrili ili gdje, je li to kada bila ili trojanski konj koji je primio i sakrio toliko nepobjedivih ratnika, boraca u ženskom ratu.</s>  <s>A natjerat ću ih da odgovore na ovo: zašto toliki i takvi nisu ovoga jednog, i tako nemoćnog kao što vidite, mogli ili uhvatiti dok je stajao ili dostići kad je bježao; a oni se, ako dođu do tog mjesta, nikad više neće izvući, jamčim vam.</s> <s>Neka su na banketima koliko god žele duhoviti, brbljavi, uz vino ponekad i rječiti; jedna je snaga sudnice, druga blagovaonice, jedna je taktika za klupe, druga za kaučeve; ne izgledaju isto suci i vinska braća; pa i svjetlo sunca sasvim je drugačije od onoga noćnih svjetiljki.</s>  <s>Zbog toga ćemo izbiti mi njima iz glave sve njihove igrice, sve pošalice, ako budu svjedočili.</s>  <s>Ali neka me dobro čuju, neka odaberu drugi posao, neka drugdje čine usluge, neka se pokažu na drugim zadacima; neka se kod te dame istaknu elegancijom, neka je osvoje trošenjem, neka se za nju lijepe, neka pred njom leže, robovi neka joj budu; samo neka poštede život i imetak nevine osobe.</s>
+                  <milestone n="29" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="68"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Ali spomenuti su robovi po odluci srodnika, plemenitih i uglednih osoba, oslobođeni.</s>  <s>Napokon smo našli nešto što je, može se reći, ta dama učinila po odluci i odobrenju svojih rođaka, vrlih junaka.</s>  <s>Ali želio bih znati kakav je dokaz to oslobođenje; njime se ili traži optužba za gospodina Celija, ili se izbjegava istraga, ili se robovima, saučesnicima u mnogim djelima, s razlogom plaća nagrada.</s> <s>Kažu mi: »Ali rođaci su tako odlučili.«</s> <s>Zašto i ne bi odlučili, kad i vi kažete da ste pred njih iznijeli stvar koju vam nisu dojavili drugi, već ste je sami, gospođo, otkrili?</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="69"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Hoćemo li se onda ovdje još čuditi što se na onu izmišljenu ampulu nadovezala čitava skandalozna komedija?</s>  <s>Nema toga što ženi takve vrste neće pasti na um.</s>  <s>Za događaj se čulo i krenule su priče.</s> <s>Vi već odavno dobro razumijete, gospodo suci, što bih htio, odnosno, još bolje, što ne bih htio reći.</s> <s>A čak i ako je do toga došlo, svakako to nije učinio gospodin Celije – kakve je to veze imalo s njim – nego je to bio neki mladi čovjek, možda ne toliko bez duha koliko bez srama.</s>  <s>A ako je izmišljeno, to je, priznajem, nepristojna, ali ipak ne i neduhovita laž; i nikad je ne bi prihvatili glasine i javno mnijenje da se sve što ima veze s nekakvom sramotom ne slaže posve fino s ovdje prisutnom.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="70"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N">
+                  <s>Svoj sam govor o ovom slučaju, gospodo suci, izrekao i dovršio.</s> <s>Već vam je jasno kakva je odluka pred vama, koliko vam je važno pitanje povjereno.</s> <s>Vodi se istraga o oružanoj pobuni.</s>  <s>Zakon koji se odnosi na vojnu vlast, na najviše ovlasti, na stanje u domovini, na opću dobrobit, zakon koji je Katul donio kad je, zbog ustanka građana pod oružjem, ugrožen bio gotovo sam opstanak naše države, i zakon koji je, pošto je za mojeg konzulata suzbijen onaj požar, pogasio zadimljene ostatke urote, po tom se sad zakonu mladost gospodina Celija izlaže opasnosti – ne od državne kazne, već od strasti i igrica jedne žene.</s> <milestone n="30" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="71"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>A na ovom se mjestu još i citira osuda Marka Kamurcija i Gaja Cezerna.</s>  <s>O, ludosti! Ludošću da to zovem, ili neusporedivim besramljem?</s>  <s>Usuđujete se, dolazeći od takve žene, spominjati te i takve ljude?</s>  <s>Usuđujete se buditi sjećanje na tolik grijeh, i to sjećanje koje nije ugaslo, već ga je starina potisnula?</s>  <s>Zbog koje su optužbe i kojeg grijeha oni stradali?</s>  <s>Znamo, zato što su bol i nepoštenje iste žene osvetili gnjusnim seksualnim nasiljem u Vetijevoj stvari.</s>  <s>Dakle, da bi se u ovom predmetu izreklo Vetijevo ime, da bi se ponovila ona stara jeftina priča, zato se izvlači slučaj Kamurcija i Cezerna?</s>  <s>Ta dvojica, mada svakako nisu bili obuhvaćeni zakonom o oružanoj pobuni, u ono su zlodjelo ipak bili toliko upleteni da se ne bi mogli izvući iz omče nijednog zakona.</s>
+                  </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="72"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N">
+                  <s>Ali gospodin Marko Celije, zašto je on pozvan pred ovaj sud?</s> <s>Niti je protiv njega iznesena optužba na koju se odnose spomenuti propisi, niti ga tuže za nešto odvojeno od zakona, ali adekvatno veličini vaših ovlasti.</s> <s>Početak njegova života bio je posvećen učenju, vježbanju onih umijeća kojima se pripremamo za ovu sudsku praksu, za državničku karijeru, za čast, slavu, veliko ime.</s>  <s>Kretao se u krugu starije gospode čiju je energičnost i integritet morao poželjeti oponašati, u krugu vršnjaka-pripravnika gdje se birao put slave ravan putu najboljih i najplemenitijih.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="73"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>A kad je životno već malo sazreo, pošao je u Afriku, kao pratilac prokonzula Kvinta Pompeja, čovjeka iznimno moralnog i savjesnog na svakoj svojoj dužnosti.</s> <s>U toj su se provinciji, inače, nalazili imovina i posjedi Celijeva oca, a postojala je i mogućnost određenog iskustva upravljanja, koje naši stari nisu bez razloga povjeravali toj životnoj dobi.</s>  <s>Tamošnji je boravak zaključio, po Pompejevu sudu, s odličnim ocjenama; to ćete doznati kad spomenuti gospodin bude svjedočio.</s>  <s>Onda je Celije odlučio, po starome običaju i po uzoru na one mladiće koji su kasnije postali najuglednijim osobama i najslavnijim građanima ove države, svoju aktivnost predstaviti rimskome narodu nekom pozornosti vrijednom sudskom tužbom.</s>
+                  <milestone n="31" unit="chapter"/> 
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="74"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Bilo bi mi draže da ga je želja za slavom odvela na drugu stranu; ali prošlo je vrijeme za takva prigovaranja.</s>  <s>Tužio je gospodina Gaja Antonija, mojeg kolegu konzula; tom nesretniku ništa nije pomogao spomen na jedinstvene zasluge za državu, a naštetio mu je dojam da se radi o mogućoj izdaji.</s> <s>Od tog časa Celija nijedan vršnjak nije mogao dostići angažmanom na sudu, angažmanom u poslovima i predmetima prijatelja, pouzdanošću kojom je podržavao svoj krug.</s> <s>Ono što mogu postići samo energične, samo trezvene, samo aktivne osobe, to je sve postigao djelovanjem i neumornošću.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="75"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Na tom, tako rekuć, kritičnom zavoju života – ne želim ništa skrivati, pouzdajem se u vašu širinu pogleda i vašu mudrost – reputacija je mladog čovjeka malo očešala ogradu zbog novoga poznanstva s tom ženom, zbog nesretnog susjedstva i manje otpornosti na užitke; želja za užicima, ako je duže vrijeme sputana i na početku života potisnuta i zanijekana, često zna u punom opsegu nenadano izbiti i eksplodirati.</s>  <s>Iz takva načina života ili, da kažem, iz takvih priča – jer nipošto nije bio baš takav kako su ljudi govorili – no, iz toga, što bilo da bilo, uspio se izvući, potpuno se svega osloboditi i spasiti, i od te je ozloglašene veze toliko udaljen da se sad mora braniti od neprijateljskih i mrzilačkih napada iste osobe.</s>
+               </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="76"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <s>Pa, kako bi se okončale te priče koje su ga ometale, priče o zabavama i besposličarenju, postupio je – Herkula mi, protiv moje volje i uz moje veliko protivljenje, ali ipak je tako postupio – mojeg je prijatelja prijavio sudu zbog nepravilnosti u predizbornoj kampanji; pošto su ga oslobodili, Celije ga i dalje progoni, ponovno daje na sud; ne sluša nikoga od nas, nasilniji je nego što bih htio.</s>  <s>Ali ne govorim ja o mudrosti, koja se ne može steći u toj dobi; o ambicioznosti govorim, o žudnji za pobjedom, o žaru kojim duh stremi slavi; poticaji koji su u ovim našim godinama već nužno pod većom kontrolom, oni u mladosti, kao kod biljaka, pokazuju kakva će se postići zrelost vrline i koliki će biti plodovi aktivnosti.</s>  <s>Znamo da je uvijek vrlo dobro trebalo promišljati o tome kako mladiće obuzdati na putu k slavi, a ne kako ih na taj put tjerati; u toj dobi više treba obrezivati ono što zbog hvalevrijednog talenta prekomjerno cvate, nego što bi trebalo docjepljivati.</s></p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="77"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <reg instant="false">qua</reg> re, si cui nimium effervisse videtur huius vel in suscipiendis vel in gerendis inimicitiis vis, ferocitas, pertinacia, si quem etiam minimorum horum aliquid offendit, si purpurae genus, si amicorum catervae, si splendor, si nitor, iam ista deferverint, iam aetas omnia, iam res, iam dies mitigarit. <milestone n="32" unit="chapter"/> 
+               </p> 
+               <p part="N"> 
+                  <reg instant="false">conservate</reg> igitur rei publicae, iudices, civem bonarum artium, bonarum partium, bonorum virorum. <reg instant="false">promitto</reg> hoc vobis et rei publicae spondeo, si modo nos ipsi rei publicae satis fecimus, numquam hunc a nostris rationibus seiunctum fore. <reg instant="false">quod</reg> cum fretus nostra familiaritate promitto, tum quod durissimis se ipse legibus iam obligavit. </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="78"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <reg instant="false">non</reg> enim potest qui hominem consularem, cum ab eo rem publicam violatam esse diceret, in iudicium vocarit ipse esse in re publica civis turbulentus; non potest qui ambitu ne absolutum quidem patiatur esse absolutum ipse impune umquam esse largitor. <reg instant="false">habet</reg> a <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arco</ex>
+                     </expan>
+                  </choice> Caelio res publica, iudices, duas accusationes vel obsides periculi vel pignora voluntatis. <reg instant="false">qua</reg> re oro obtestorque vos, iudices, ut qua in civitate paucis his diebus Sex. Clodius absolutus est, quem vos per biennium aut ministrum seditionis aut ducem vidistis, hominem sine re, sine fide, sine spe, sine sede, sine fortunis, ore, lingua, manu, vita omni inquinatum, qui aedis sacras, qui censum populi Romani, qui memoriam publicam suis manibus incendit, qui Catuli monumentum adflixit, meam domum diruit, mei fratris incendit, qui in Palatio atque in urbis oculis servitia ad caedem et ad inflammandam urbem incitavit: in ea civitate ne patiamini illum absolutum muliebri gratia, <choice>
+                     <abbr>M.</abbr>
+                     <expan instant="false">M<ex instant="false">arcum</ex>
+                     </expan>
+                  </choice> Caelium libidini muliebri condonatum, ne eadem mulier cum suo coniuge et fratre et turpissimum latronem eripuisse et honestissimum adulescentem oppressisse videatur. </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="79"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <reg instant="false">quod</reg> cum huius vobis adulescentiam proposueritis, constituitote ante oculos etiam huius miseri senectutem qui hoc unico filio nititur, in huius spe requiescit, huius unius casum pertimescit; quem vos supplicem vestrae misericordiae, servum potestatis, abiectum non tam ad pedes quam ad mores sensusque vestros, vel recordatione parentum vestrorum vel liberorum iucunditate sustentate, ut in alterius dolore vel pietati vel indulgentiae vestrae serviatis. <reg instant="false">nolite</reg>, iudices, aut hunc iam natura ipsa occidentem velle maturius exstingui volnere vestro quam suo fato, aut hunc nunc primum florescentem firmata iam stirpe virtutis tamquam turbine aliquo aut subita tempestate pervertere. </p> 
+            </div> 
+            <div type="textpart"
+                 subtype="section"
+                 n="80"
+                 part="N"
+                 org="uniform"
+                 sample="complete"> 
+               <p part="N"> 
+                  <reg instant="false">conservate</reg> parenti filium, parentem filio, ne aut senectutem iam prope desperatam contempsisse aut adulescentiam plenam spei maximae non modo non aluisse vos verum etiam perculisse atque adflixisse videamini. <reg instant="false">quem</reg> si nobis, si suis, si rei publicae conservatis, addictum, deditum, obstrictum vobis ac liberis vestris habebitis omniumque huius nervorum ac laborum vos potissimum, iudices, fructus uberes diuturnosque capietis. </p>
+            </div>
+         </div>
+      </body>
+   </text>
+
+</TEI>

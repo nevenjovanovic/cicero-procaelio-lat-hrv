@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8"/>
+	
+	<title>Ciceronis Pro Caelio oratio 1</title>
+	<meta name="keywords" content="Cicero, Latin language, parallel text, paraphrasis, Latin prose, oration, rhetoric, learning Latin" />
+	<meta name="description" content="Cicero, Pro Caelio 1 in Latin and Croatian." />
+	<meta name="author" content="Neven Jovanović, Department of Classical Philology, Faculty of Humanities and Social Sciences" />
+	<meta name="revised" content="Neven Jovanović, Department of Classical Philology, Faculty of Humanities and Social Sciences, 2021-09-13" />
+	
+	<link rel="stylesheet" href="style.css"/>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="jquery.mousewheel.js"></script>
+	
+</head>
+
+<body>
+	
+  <h1>Pro Caelio 1</h1>
+  <p>Fons: TKTK</p>
+	<div id="page-wrap">
+		
+		<div class="post">
+
+		     <s title="1.1">si quis, iudices, forte nunc adsit ignarus legum iudiciorum consuetudinisque nostrae, miretur profecto quae sit tanta atrocitas huiusce causae, quod diebus festis ludisque publicis, omnibus forensibus negotiis intermissis, unum hoc iudicium exerceatur, nec dubitet quin tanti facinoris reus arguatur ut eo neglecto civitas stare non possit.</s> <s title="1.2">idem cum audiat esse legem quae de seditiosis consceleratisque civibus qui armati senatum obsederint, magistratibus vim attulerint, rem publicam oppugnarint cotidie quaeri iubeat: legem non improbet, crimen quod versetur in iudicio requirat; cum audiat nullum facinus, nullam audaciam, nullam vim in iudicium vocari, sed adulescentem inlustri ingenio, industria, gratia accusari ab eius filio quem ipse in iudicium et vocet et vocarit, oppugnari autem opibus meretriciis: Atratini ipsius pietatem non reprehendat, libidinem muliebrem comprimendam putet, vos laboriosos existimet quibus otiosis ne in communi quidem otio liceat esse.</s>
+			
+
+		</div>
+		
+		<div class="post">
+
+		     <s title="1.1">Ako bi se tko, gospodo suci, slučajno zatekao sada i ovdje ne poznajući naše zakone, sudove, običaje, ostao bi, mislim, preneražen stravičnošću ovoga slučaja; za blagdana i festivala, kad su obustavljeni svi pravni poslovi, samo se ovo naše sudsko ročište održavati mora. Taj bi netko zato sa sigurnošću zaključio: vodi se postupak protiv okrivljenika za zločin čija bi veličina, izostane li reakcija, mogla ugroziti opstanak čitave države.</s>  <s title="1.2">Pa kad bi još čuo da postoji zakon koji nalaže da se o podstrekačima pobune i nasilja – o građanima koji su senat naoružani opkolili, dužnosnike fizički napali, na državnu zajednicu nasrnuli – da se o njima sudska istraga provodi u bilo koji dan, netko bi zakon zdušno odobrio, samo bi za optužbu pitao. A kad bi čuo da se ne pretresa nikakvo masovno ubojstvo, nikakvo rušenje vlasti, nikakav čin nasilja, već da jedan mladić iznimno inteligentan, aktivan, popularan, biva optužen od sina osobe koju sam izvodi pred sud, kao što ju je i prije izvodio, a pritom biva napadan sredstvima bludničkim – tada taj netko sinovsku lojalnost osudio ne bi; ženske strasti treba suzbijati, zaključio bi; a vi ste, shvatio bi, mučenici, kojima odmor nije dozvoljen ni kad se svi odmaraju.</s>
+		</div>
+	     <div class="post"> 
+	          <s title="2.1">etenim si attendere diligenter atque existimare vere de omni hac causa volueritis, sic constituetis, iudices, nec descensurum quemquam ad hanc accusationem fuisse cui utrum vellet liceret nec, cum descendisset, quicquam habiturum spei fuisse, nisi alicuius intolerabili libidine et nimis acerbo odio niteretur.</s> <s title="2.2">sed ego Atratino, humanissimo atque optimo adulescenti, meo necessario, ignosco, qui habet excusationem vel pietatis vel necessitatis vel aetatis.</s> <s title="2.3">si voluit accusare, pietati tribuo, si iussus est, necessitati, si speravit aliquid, pueritiae.</s> <s title="2.4">ceteris non modo nihil ignoscendum sed etiam acriter est resistendum.</s>  
+	     </div>
+          <div class="post"> 
+               <s title="2.1">Kako god bilo, poželite li ovaj slučaj razmotriti pomno i procijeniti realno, naći ćete, gospodo suci, da se postupak ovakve vrste ne bi usudio pokretati nitko tko može samostalno odlučivati; a kad ga je već pokrenuo, ne bi se usudio na najmanju nadu u uspjeh da nije podupiran nečijom nesnosnom požudom i nečijom pakleno ljutom mržnjom.</s> <s title="2.2">Ali gospodinu Atratinu, pristojnom i finom mladom čovjeku, meni bliskom, ja mogu oprostiti; opravdavaju ga ili lojalnost, ili nužda, ili dob.</s> <s title="2.3">Ako je tužbu sam odlučio pokrenuti, bilo je iz lojalnosti; ako su mu naredili, bilo je iz nužde; ako je imao kakvih ambicija, bilo je zbog djetinjastosti.</s> <s title="2.4">Drugima, međutim, ništa ne treba opraštati; dapače, valja po njima udariti svim silama.</s>
+          </div>
+	</div>
+	
+</body>
+     <script>
+          
+	$(function(){
+		$("#page-wrap").wrapInner("<table cellspacing='30'><tr></tr></table>");
+		$(".post").wrap("<td></td>");
+		$("body").mousewheel(function(event, delta) {
+			this.scrollLeft -= (delta * 30);
+			event.preventDefault();
+		});
+	});
+	</script>
+     <script>
+          var index = {};
+
+$("div.post s")
+.each(function () {
+    if ( !(this.title in index) ) {
+        index[this.title] = $();
+    }
+    index[this.title].push(this);
+})
+.hover(
+    function () {
+        index[this.title].addClass("highlight");
+    },
+    function () {
+        index[this.title].removeClass("highlight");
+    }
+);
+     </script>
+</html>
